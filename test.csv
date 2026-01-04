@@ -1,0 +1,7 @@
+Prefix,Name,Storage,Number
+CAM,kamera,Videolager,10
+KAM,kamera,Kameralager,10
+SVJ,Svitsj,IMlager,10
+COM,data,IMlager,20
+TES,test,TEST,200
+TEP,test2,TEST,199
