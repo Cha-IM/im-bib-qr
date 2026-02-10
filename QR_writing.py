@@ -16,16 +16,19 @@ En funksjon som genererer en QRcode med valgt størrelse og farger. OK
 
 """
 
-QR_SIZE = 6 * mm
-CELL_PADDING = 3 * mm
-MARGIN = 4 * mm
+QR_SIZE = 8 * mm
+CELL_PADDING = 1 * mm
+# PAGE_OFFSET = 4*mm
+MARGIN = 0 * mm
 BORDER_SIZE = 1
 FONT_SIZE = 6  # px
 FONT = "Helvetica"
 
-CELL_SIZE = QR_SIZE + 2 * CELL_PADDING
-ROW_WIDTH = CELL_SIZE+MARGIN
-ROW_HEIGHT = CELL_SIZE + 3 * FONT_SIZE
+CELL_PADDING_W = 2*CELL_PADDING
+CELL_H = QR_SIZE + 3 * CELL_PADDING +  2 * FONT_SIZE
+CELL_W = QR_SIZE + 2*CELL_PADDING_W
+ROW_WIDTH = CELL_W+MARGIN
+ROW_HEIGHT = CELL_H + MARGIN
 
 # Number of QR's
 width, height = A4
@@ -34,9 +37,10 @@ QR_COLS = floor((height - MARGIN) // ROW_HEIGHT)
 MAX_PAGE_QR = QR_COLS * QR_ROWS
 
 # TABLE
-DASH = [height / 100, height / 25]  # 1px drawing, 4px space
 LINE_WIDTH = 1  # px
-
+DASH = [height / 100, height / 25]  # 1px drawing, 4px space
+# GRID_COLOR = 0.5, 0.5, 0.5 # Gray
+GRID_COLOR = 0,0,0 # Black
 # Debug info:
 print(width - 2 * MARGIN, height - 2 * MARGIN)
 print(ROW_WIDTH, ROW_HEIGHT)
@@ -49,7 +53,7 @@ def make_qr(prefix: str, fill):
     
     QR = qrcode.QRCode(
         version=1,
-        error_correction=qrcode.ERROR_CORRECT_H,
+        error_correction=qrcode.ERROR_CORRECT_M,
         box_size=3,
         border=BORDER_SIZE,
     )
@@ -65,17 +69,23 @@ def draw_table(c: canvas.Canvas):
     x = MARGIN
     y = MARGIN
     while x < width:
-        points.append((x, 0, x, height))
+        points.append((x, 0, x, height-height%ROW_HEIGHT))
         x += ROW_WIDTH
     while y < height:
-        points.append((0, y, width, y))
+        points.append((0, y, width-width%ROW_WIDTH, y))
         y += ROW_HEIGHT
-    c.setDash(DASH)
+    # c.setDash(*DASH)
     c.setLineWidth(LINE_WIDTH)
-    c.setStrokeColorRGB(0.5, 0.5, 0.5)
+    c.setStrokeColorRGB(*GRID_COLOR)
     c.lines(points)
     c.restoreState()
 
+def make_cutter_page():
+    c = canvas.Canvas("CriCut_mal.pdf", pagesize=A4)
+    c.setFont("Helvetica", FONT_SIZE)
+    draw_table(c)
+    c.showPage()
+    c.save()
 
 def qr_pdf_generator(items: list[dict[str,str]], name: str = ""):
     if name:
@@ -114,17 +124,18 @@ def qr_pdf_generator(items: list[dict[str,str]], name: str = ""):
         # legg til PDF.
         # c.setFillColorRGB(*back)
         c.setFillColorRGB(*fill)
-        c.rect(x + CELL_PADDING//2, y+CELL_PADDING//2, width= ROW_WIDTH - CELL_PADDING, height=CELL_SIZE+CELL_PADDING, fill=1)
+        c.rect(x, y, width= CELL_W, height=CELL_H, fill=1)
         c.restoreState()
         c.drawInlineImage(
-            img, x+MARGIN/2+CELL_PADDING, y + 3 * FONT_SIZE+CELL_PADDING, width=QR_SIZE, height=QR_SIZE
+            # img, x+MARGIN/2+CELL_PADDING, y + 3 * FONT_SIZE+CELL_PADDING, width=QR_SIZE, height=QR_SIZE
+            img, x+CELL_PADDING_W, y + 2*FONT_SIZE+2*CELL_PADDING, width=QR_SIZE, height=QR_SIZE
         )
 
         # c.setStrokeColorRGB(*back)
-        t = c.beginText(x + CELL_PADDING, y + 2 * FONT_SIZE+CELL_PADDING//2)
+        t = c.beginText(x + CELL_PADDING, y + 2 * FONT_SIZE)
         size = c.stringWidth(prefix, FONT, FONT_SIZE)
         
-        ratio = size / (ROW_WIDTH - 2 * CELL_PADDING)
+        ratio = size / (CELL_W)
         if ratio > 1.5:
 
             n = len(prefix)
@@ -153,5 +164,6 @@ if __name__ == "__main__":
     prefixes.insert(0, {"prefix":f"qwertyuioølkioprtyqwertyuioølkioprty","fg":"255. 220. 95", "bg":"255. 255. 255"})
     prefixes.insert(0, {"prefix":f"qwertyuioølkioprty", "fg":"255. 220. 95", "bg":"255. 255. 255"})
     prefixes.insert(0, {"prefix":f"qwertyui", "fg":"255. 220. 95", "bg":"255. 255. 255"})
-
+    print(MAX_PAGE_QR)
     qr_pdf_generator(prefixes)
+    make_cutter_page()
