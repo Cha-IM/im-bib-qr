@@ -1,0 +1,1558 @@
+2026-01-04T13-02 - No logs 
+2026-01-04T13-02 - No logs 
+2026-01-04T13-02 - No logs 
+2026-01-04T13-02 - No logs 
+2026-01-04T13-02 - No logs 
+2026-01-04T13-02
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'CAM']
+
+2026-01-04T13-02
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'KAM']
+
+2026-01-04T13-02
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'SVJ']
+
+2026-01-04T13-02
+**********Added********** 
+Added the following to the DB 
+[4, 1, 20, 'COM']
+
+2026-01-04T13-02
+**********Added********** 
+Added the following to the DB 
+[5, 1, 200, 'TES']
+
+2026-01-04T13-02
+**********Added********** 
+Added the following to the DB 
+[6, 1, 199, 'TEP']
+
+2026-01-04T13-02 - No logs 
+2026-01-04T13-02 - No logs 
+2026-01-04T13-04 - No logs 
+2026-01-04T13-04 - No logs 
+2026-01-04T13-04 - No logs 
+2026-01-04T13-04 - No logs 
+2026-01-04T13-04 - No logs 
+2026-01-04T13-04
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'CAM', 'Videolager', 10)
+
+2026-01-04T13-04
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'KAM', 'Kameralager', 10)
+
+2026-01-04T13-04
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Svitsj', 'SVJ', 'Imlager', 10)
+
+2026-01-04T13-04
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Data', 'COM', 'Imlager', 20)
+
+2026-01-04T13-04
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Test', 'TES', 'Test', 200)
+
+2026-01-04T13-04
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Test2', 'TEP', 'Test', 199)
+
+2026-01-04T13-04 - No logs 
+2026-01-04T13-04 - No logs 
+2026-01-04T13-05 - No logs 
+2026-01-04T13-05 - No logs 
+2026-01-04T13-05 - No logs 
+2026-01-04T13-05 - No logs 
+2026-01-04T13-05 - No logs 
+2026-01-04T13-05
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'CAM']
+
+2026-01-04T13-05
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'KAM']
+
+2026-01-04T13-05
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'SVJ']
+
+2026-01-04T13-05
+**********Added********** 
+Added the following to the DB 
+[4, 1, 20, 'COM']
+
+2026-01-04T13-05
+**********Added********** 
+Added the following to the DB 
+[5, 1, 200, 'TES']
+
+2026-01-04T13-05
+**********Added********** 
+Added the following to the DB 
+[6, 1, 199, 'TEP']
+
+2026-01-04T13-05 - No logs 
+2026-01-04T13-05 - No logs 
+2026-01-04T13-05 - No logs 
+2026-01-04T13-05 - No logs 
+2026-01-04T13-07 - No logs 
+2026-01-04T13-07 - No logs 
+2026-01-04T13-07 - No logs 
+2026-01-04T13-07 - No logs 
+2026-01-04T13-07 - No logs 
+2026-01-04T13-07
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'CAM']
+
+2026-01-04T13-07
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'KAM']
+
+2026-01-04T13-07
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'SVJ']
+
+2026-01-04T13-07
+**********Added********** 
+Added the following to the DB 
+[4, 1, 20, 'COM']
+
+2026-01-04T13-07
+**********Added********** 
+Added the following to the DB 
+[5, 1, 200, 'TES']
+
+2026-01-04T13-07
+**********Added********** 
+Added the following to the DB 
+[6, 1, 199, 'TEP']
+
+2026-01-04T13-07 - No logs 
+2026-01-04T13-07 - No logs 
+2026-01-04T13-07 - No logs 
+2026-01-04T13-07 - No logs 
+2026-01-04T13-11 - No logs 
+2026-01-04T13-11 - No logs 
+2026-01-04T13-11 - No logs 
+2026-01-04T13-11 - No logs 
+2026-01-04T13-11 - No logs 
+2026-01-04T13-11
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'CAM']
+
+2026-01-04T13-11
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'KAM']
+
+2026-01-04T13-11
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'SVJ']
+
+2026-01-04T13-11
+**********Added********** 
+Added the following to the DB 
+[4, 1, 20, 'COM']
+
+2026-01-04T13-11
+**********Added********** 
+Added the following to the DB 
+[5, 1, 200, 'TES']
+
+2026-01-04T13-11
+**********Added********** 
+Added the following to the DB 
+[6, 1, 199, 'TEP']
+
+2026-01-04T13-11 - No logs 
+2026-01-04T13-11 - No logs 
+2026-01-04T13-11 - No logs 
+2026-01-04T13-23 - No logs 
+2026-01-04T13-23 - No logs 
+2026-01-04T13-23 - No logs 
+2026-01-04T13-23 - No logs 
+2026-01-04T13-23 - No logs 
+2026-01-04T13-23
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'CAM', 'Videolager', 10)
+
+2026-01-04T13-23
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'KAM', 'Kameralager', 10)
+
+2026-01-04T13-23
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Svitsj', 'SVJ', 'Imlager', 10)
+
+2026-01-04T13-23
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Data', 'COM', 'Imlager', 20)
+
+2026-01-04T13-23
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Test', 'TES', 'Test', 200)
+
+2026-01-04T13-23
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Test2', 'TEP', 'Test', 199)
+
+2026-01-04T13-23 - No logs 
+2026-01-04T13-23 - No logs 
+2026-01-04T13-23 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'CAM', 'Videolager', 10)
+
+2026-01-04T13-24
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'KAM', 'Kameralager', 10)
+
+2026-01-04T13-24
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Svitsj', 'SVJ', 'Imlager', 10)
+
+2026-01-04T13-24
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Data', 'COM', 'Imlager', 20)
+
+2026-01-04T13-24
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Test', 'TES', 'Test', 200)
+
+2026-01-04T13-24
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Test2', 'TEP', 'Test', 199)
+
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'CAM']
+
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'KAM']
+
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'SVJ']
+
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[4, 1, 20, 'COM']
+
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[5, 1, 200, 'TES']
+
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[6, 1, 199, 'TEP']
+
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'CAM']
+
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'KAM']
+
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'SVJ']
+
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[4, 1, 20, 'COM']
+
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[5, 1, 200, 'TES']
+
+2026-01-04T13-24
+**********Added********** 
+Added the following to the DB 
+[6, 1, 199, 'TEP']
+
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-24 - No logs 
+2026-01-04T13-51 - No logs 
+2026-01-04T13-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'CAM', 'Videolager', 10)
+
+2026-01-04T13-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'KAM', 'Kameralager', 10)
+
+2026-01-04T13-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Svitsj', 'SVJ', 'Imlager', 10)
+
+2026-01-04T13-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Data', 'COM', 'Imlager', 20)
+
+2026-01-04T13-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Test', 'TES', 'Test', 200)
+
+2026-01-04T13-51 - No logs 
+2026-01-04T14-18 - No logs 
+2026-01-04T14-18 - No logs 
+2026-01-04T14-18 - No logs 
+2026-01-04T14-18 - No logs 
+2026-01-04T14-18 - No logs 
+2026-01-04T14-18
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'CAM', 'Videolager_1', 10)
+
+2026-01-04T14-18
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'KAM', 'Videolager_2', 10)
+
+2026-01-04T14-18
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Svitsj', 'SVJ', 'Fotolager', 10)
+
+2026-01-04T14-18
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Data', 'COM', 'Spesialager', 20)
+
+2026-01-04T14-18
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Test', 'TES', 'Imlager', 200)
+
+2026-01-04T14-18 - No logs 
+2026-01-04T14-18 - No logs 
+2026-01-04T14-18 - No logs 
+2026-01-04T14-18 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'CAM', 'Videolager_1', 10)
+
+2026-01-04T14-19
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'KAM', 'Videolager_2', 10)
+
+2026-01-04T14-19
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Svitsj', 'SVJ', 'Fotolager', 10)
+
+2026-01-04T14-19
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Data', 'COM', 'Spesialager', 20)
+
+2026-01-04T14-19
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Test', 'TES', 'Imlager', 200)
+
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'CAM']
+
+2026-01-04T14-19
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'KAM']
+
+2026-01-04T14-19
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'SVJ']
+
+2026-01-04T14-19
+**********Added********** 
+Added the following to the DB 
+[4, 1, 20, 'COM']
+
+2026-01-04T14-19
+**********Added********** 
+Added the following to the DB 
+[5, 1, 200, 'TES']
+
+2026-01-04T14-19 - No logs 
+2026-01-04T14-19 - No logs 
+2026-01-04T14-20 - No logs 
+2026-01-04T14-20 - No logs 
+2026-01-04T14-20 - No logs 
+2026-01-04T14-20 - No logs 
+2026-01-04T14-20 - No logs 
+2026-01-04T14-20
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'CAM']
+
+2026-01-04T14-20
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'KAM']
+
+2026-01-04T14-20
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'SVJ']
+
+2026-01-04T14-20
+**********Added********** 
+Added the following to the DB 
+[4, 1, 20, 'COM']
+
+2026-01-04T14-20
+**********Added********** 
+Added the following to the DB 
+[5, 1, 200, 'TES']
+
+2026-01-04T14-20 - No logs 
+2026-01-04T14-20 - No logs 
+2026-01-04T14-21
+**********Added********** 
+Added the following to the DB 
+[1, 3, 100, 'CAM']
+
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-04T14-21
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-04T14-21
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-04T14-21
+**********Added********** 
+Added the following to the DB 
+[4, 1, 20, 'SPES']
+
+2026-01-04T14-21
+**********Error********** 
+CHECK constraint failed: length(prefix) >= 3 
+('Test', 'IM', 'Imlager', 200)
+
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-04T14-21
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-04T14-21
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-04T14-21
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-04T14-21
+**********Error********** 
+CHECK constraint failed: length(prefix) >= 3 
+('Test', 'IM', 'Imlager', 10)
+
+2026-01-04T14-21 - No logs 
+2026-01-04T14-21 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'VID1', 'Videolager_1', 10)
+
+2026-01-04T14-22
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'VID2', 'Videolager_2', 10)
+
+2026-01-04T14-22
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Svitsj', 'FOTO', 'Fotolager', 10)
+
+2026-01-04T14-22
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Data', 'SPES', 'Spesialager', 10)
+
+2026-01-04T14-22
+**********Error********** 
+CHECK constraint failed: length(prefix) >= 3 
+('Test', 'IM', 'Imlager', 10)
+
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-04T14-22
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-04T14-22
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-04T14-22
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-04T14-22
+**********Error********** 
+CHECK constraint failed: length(prefix) >= 3 
+('Test', 'IM', 'Imlager', 10)
+
+2026-01-04T14-22 - No logs 
+2026-01-04T14-22 - No logs 
+2026-01-04T14-23 - No logs 
+2026-01-04T14-23 - No logs 
+2026-01-04T14-23 - No logs 
+2026-01-04T14-23 - No logs 
+2026-01-04T14-23 - No logs 
+2026-01-04T14-23
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-04T14-23
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-04T14-23
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-04T14-23
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-04T14-23
+**********Added********** 
+Added the following to the DB 
+[5, 1, 10, 'IML']
+
+2026-01-04T14-23 - No logs 
+2026-01-04T14-23 - No logs 
+2026-01-04T14-24 - No logs 
+2026-01-04T14-24 - No logs 
+2026-01-04T14-24 - No logs 
+2026-01-04T14-24 - No logs 
+2026-01-04T14-24 - No logs 
+2026-01-04T14-24
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-04T14-24
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-04T14-24
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-04T14-24
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-04T14-24
+**********Added********** 
+Added the following to the DB 
+[5, 1, 10, 'IML']
+
+2026-01-04T14-24 - No logs 
+2026-01-04T14-24 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-04T14-25
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-04T14-25
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-04T14-25
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-04T14-25
+**********Added********** 
+Added the following to the DB 
+[5, 1, 10, 'IML']
+
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-04T14-25
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-04T14-25
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-04T14-25
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-04T14-25
+**********Added********** 
+Added the following to the DB 
+[5, 1, 10, 'IML']
+
+2026-01-04T14-25 - No logs 
+2026-01-04T14-25 - No logs 
+2026-01-05T07-24 - No logs 
+2026-01-05T07-24 - No logs 
+2026-01-05T07-24 - No logs 
+2026-01-05T07-24 - No logs 
+2026-01-05T07-24 - No logs 
+2026-01-05T07-24
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-05T07-24
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-05T07-24
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-05T07-24
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-05T07-24
+**********Added********** 
+Added the following to the DB 
+[5, 1, 10, 'IML']
+
+2026-01-05T07-24 - No logs 
+2026-01-05T07-24 - No logs 
+2026-01-05T07-26 - No logs 
+2026-01-05T07-26 - No logs 
+2026-01-05T07-26 - No logs 
+2026-01-05T07-26 - No logs 
+2026-01-05T07-26 - No logs 
+2026-01-05T07-26
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-05T07-26
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-05T07-26
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-05T07-26
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-05T07-26
+**********Added********** 
+Added the following to the DB 
+[5, 1, 10, 'IML']
+
+2026-01-05T07-26 - No logs 
+2026-01-05T07-26 - No logs 
+2026-01-05T07-27 - No logs 
+2026-01-05T07-27 - No logs 
+2026-01-05T07-27 - No logs 
+2026-01-05T07-27 - No logs 
+2026-01-05T07-27 - No logs 
+2026-01-05T07-27
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'VID1', 'Videolager_1', 10)
+
+2026-01-05T07-27
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamera', 'VID2', 'Videolager_2', 10)
+
+2026-01-05T07-27
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Svitsj', 'FOTO', 'Fotolager', 10)
+
+2026-01-05T07-27
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Data', 'SPES', 'Spesialager', 10)
+
+2026-01-05T07-27
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Test', 'IML', 'Imlager', 10)
+
+2026-01-05T07-27 - No logs 
+2026-01-05T07-27 - No logs 
+2026-01-05T07-59 - No logs 
+2026-01-05T07-59 - No logs 
+2026-01-05T07-59 - No logs 
+2026-01-05T07-59 - No logs 
+2026-01-05T07-59 - No logs 
+2026-01-05T07-59
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-05T07-59
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-05T07-59
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-05T07-59
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-05T07-59
+**********Added********** 
+Added the following to the DB 
+[5, 1, 10, 'IML']
+
+2026-01-05T07-59 - No logs 
+2026-01-05T07-59 - No logs 
+2026-01-05T08-01 - No logs 
+2026-01-05T08-01 - No logs 
+2026-01-05T08-01 - No logs 
+2026-01-05T08-01 - No logs 
+2026-01-05T08-01 - No logs 
+2026-01-05T08-01
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-05T08-01
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-05T08-01
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-05T08-01
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-05T08-01
+**********Added********** 
+Added the following to the DB 
+[5, 1, 10, 'IML']
+
+2026-01-05T08-01 - No logs 
+2026-01-05T08-01 - No logs 
+2026-01-05T08-03 - No logs 
+2026-01-05T08-03 - No logs 
+2026-01-05T08-03 - No logs 
+2026-01-05T08-03 - No logs 
+2026-01-05T08-03 - No logs 
+2026-01-05T08-03
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'VID1']
+
+2026-01-05T08-03
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'VID2']
+
+2026-01-05T08-03
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'FOTO']
+
+2026-01-05T08-03
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'SPES']
+
+2026-01-05T08-03
+**********Added********** 
+Added the following to the DB 
+[5, 1, 10, 'IML']
+
+2026-01-05T08-03 - No logs 
+2026-01-05T08-03 - No logs 
+2026-01-05T08-37
+**********Added********** 
+Added the following to the DB 
+[6, 1, 31, 'CVAKAMERABAG']
+
+2026-01-05T08-37
+**********Added********** 
+Added the following to the DB 
+[7, 1, 6, 'CVABLITZUTLØSER']
+
+2026-01-05T08-37
+**********Added********** 
+Added the following to the DB 
+[8, 1, 18, 'CVAUSB-USB-MINI']
+
+2026-01-05T08-37
+**********Added********** 
+Added the following to the DB 
+[9, 1, 19, 'CVASD-KORTLESER']
+
+2026-01-05T08-37
+**********Added********** 
+Added the following to the DB 
+[10, 1, 11, 'CVATRIPOD']
+
+2026-01-05T08-37
+**********Added********** 
+Added the following to the DB 
+[11, 1, 10, 'CVAMONOPOD']
+
+2026-01-05T08-37
+**********Added********** 
+Added the following to the DB 
+[12, 1, 13, 'CVAREFLEKTOR']
+
+2026-01-05T08-37
+**********Added********** 
+Added the following to the DB 
+[13, 1, 9, 'CVALOMELYKT']
+
+2026-01-05T08-37
+**********Added********** 
+Added the following to the DB 
+[14, 1, 7, 'CVALYSMALINGS-KIT']
+
+2026-01-05T08-37
+**********Added********** 
+Added the following to the DB 
+[15, 1, 2, 'CVAUSB HUB TIL USB-C']
+
+2026-01-05T08-37 - No logs 
+2026-01-05T08-39 - No logs 
+2026-01-05T08-40 - No logs 
+2026-01-05T08-40 - No logs 
+2026-01-05T08-40 - No logs 
+2026-01-05T08-40 - No logs 
+2026-01-05T08-40
+**********Added********** 
+Added the following to the DB 
+[1, 1, 31, 'CVABAG']
+
+2026-01-05T08-40
+**********Added********** 
+Added the following to the DB 
+[2, 1, 6, 'CVABLZ']
+
+2026-01-05T08-40
+**********Added********** 
+Added the following to the DB 
+[3, 1, 18, 'CVAUSB']
+
+2026-01-05T08-40
+**********Added********** 
+Added the following to the DB 
+[4, 1, 19, 'CVASDL']
+
+2026-01-05T08-40
+**********Added********** 
+Added the following to the DB 
+[5, 1, 11, 'CVATRI']
+
+2026-01-05T08-40
+**********Added********** 
+Added the following to the DB 
+[6, 1, 10, 'CVAMON']
+
+2026-01-05T08-40
+**********Added********** 
+Added the following to the DB 
+[7, 1, 13, 'CVAREF']
+
+2026-01-05T08-40
+**********Added********** 
+Added the following to the DB 
+[8, 1, 9, 'CVALYKT']
+
+2026-01-05T08-40
+**********Added********** 
+Added the following to the DB 
+[9, 1, 7, 'CVALYSM']
+
+2026-01-05T08-40
+**********Added********** 
+Added the following to the DB 
+[10, 1, 2, 'CVAUSBH']
+
+2026-01-05T08-40 - No logs 
+2026-01-05T08-41 - No logs 
+2026-01-05T08-41 - No logs 
+2026-01-05T08-41 - No logs 
+2026-01-05T08-41 - No logs 
+2026-01-05T08-41
+**********Added********** 
+Added the following to the DB 
+[1, 1, 31, 'CHABAG']
+
+2026-01-05T08-41
+**********Added********** 
+Added the following to the DB 
+[2, 1, 6, 'CHABLZ']
+
+2026-01-05T08-41
+**********Added********** 
+Added the following to the DB 
+[3, 1, 18, 'CHAUSB']
+
+2026-01-05T08-41
+**********Added********** 
+Added the following to the DB 
+[4, 1, 19, 'CHASDL']
+
+2026-01-05T08-41
+**********Added********** 
+Added the following to the DB 
+[5, 1, 11, 'CHATRI']
+
+2026-01-05T08-41
+**********Added********** 
+Added the following to the DB 
+[6, 1, 10, 'CHAMON']
+
+2026-01-05T08-41
+**********Added********** 
+Added the following to the DB 
+[7, 1, 13, 'CHAREF']
+
+2026-01-05T08-41
+**********Added********** 
+Added the following to the DB 
+[8, 1, 9, 'CHALYKT']
+
+2026-01-05T08-41
+**********Added********** 
+Added the following to the DB 
+[9, 1, 7, 'CHALYSM']
+
+2026-01-05T08-41
+**********Added********** 
+Added the following to the DB 
+[10, 1, 2, 'CHAUSBH']
+
+2026-01-05T08-41 - No logs 
+2026-01-05T08-50 - No logs 
+2026-01-05T08-50 - No logs 
+2026-01-05T08-50 - No logs 
+2026-01-05T08-50 - No logs 
+2026-01-05T08-50 - No logs 
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[1, 1, 31, 'CHABAG']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[2, 1, 6, 'CHABLZ']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[3, 1, 18, 'CHAUSB']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[4, 1, 19, 'CHASDL']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[5, 1, 11, 'CHATRI']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[6, 1, 10, 'CHAMON']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[7, 1, 13, 'CHAREF']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[8, 1, 9, 'CHALYKT']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[9, 1, 7, 'CHALYSM']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[10, 1, 2, 'CHAUSBH']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[11, 1, 5, 'CHAVIM']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[12, 1, 3, 'CHAVIU']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[13, 1, 18, 'CHAVIB']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[14, 1, 6, 'CHAVIL']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[15, 1, 2, 'CHAVIO']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[16, 1, 3, 'CHAMICM']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[17, 1, 6, 'CHAMIC']
+
+2026-01-05T08-50
+**********Added********** 
+Added the following to the DB 
+[18, 1, 5, 'CHALEDP']
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Kamerabag', 'CHABAG', 'Fotolager', 31)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Blitzutløser', 'CHABLZ', 'Fotolager', 6)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb-usb-mini', 'CHAUSB', 'Fotolager', 18)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Sd-kortleser', 'CHASDL', 'Fotolager', 19)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Tripod', 'CHATRI', 'Fotolager', 11)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Monopod', 'CHAMON', 'Fotolager', 10)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Reflektor', 'CHAREF', 'Fotolager', 13)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Lomelykt', 'CHALYKT', 'Fotolager', 9)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Lysmalings-kit', 'CHALYSM', 'Fotolager', 7)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb hub til usb-c', 'CHAUSBH', 'Fotolager', 2)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Canon m50 m.rig', 'CHAVIM', 'Videolager', 5)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Canon m50 u.rig', 'CHAVIU', 'Videolager', 3)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Canon m50 batteri', 'CHAVIB', 'Videolager', 18)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Canon m50 lader', 'CHAVIL', 'Videolager', 6)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Canon m50 objektiv', 'CHAVIO', 'Videolager', 2)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Røde-shotgun microfon mini', 'CHAMICM', 'Videolager', 3)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Røde-shotgun microfon', 'CHAMIC', 'Videolager', 6)
+
+2026-01-05T08-51
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Led panel', 'CHALEDP', 'Videolager', 5)
+
+2026-01-05T08-51 - No logs 
+2026-01-05T10-31 - No logs 
+2026-01-05T10-31 - No logs 
+2026-01-05T10-31 - No logs 
+2026-01-05T10-31 - No logs 
+2026-01-05T10-31 - No logs 
+2026-01-05T10-31 - No logs 
+2026-01-05T10-31 - No logs 
+2026-01-05T10-31 - No logs 
+2026-01-05T10-31 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32
+**********Added********** 
+Added the following to the DB 
+[1, 1, 10, 'CHAVID1']
+
+2026-01-05T10-32
+**********Added********** 
+Added the following to the DB 
+[2, 1, 10, 'CHAFOTO']
+
+2026-01-05T10-32
+**********Added********** 
+Added the following to the DB 
+[3, 1, 10, 'CHASPES']
+
+2026-01-05T10-32
+**********Added********** 
+Added the following to the DB 
+[4, 1, 10, 'CHAIML']
+
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-32 - No logs 
+2026-01-05T10-33 - No logs 
+2026-01-05T10-33 - No logs 
+2026-01-05T10-33 - No logs 
+2026-01-05T10-33
+**********Added********** 
+Added the following to the DB 
+[2, 11, 999, 'CHAFOTO']
+
+2026-01-05T10-33 - No logs 
+2026-01-05T10-34 - No logs 
+2026-01-05T10-34 - No logs 
+2026-01-05T10-34 - No logs 
+2026-01-05T10-35 - No logs 
+2026-01-05T10-35 - No logs 
+2026-01-05T10-35 - No logs 
+2026-01-05T10-38
+**********Added********** 
+Added the following to the DB 
+[4, 20, 1, 'CHASDL']
+
+2026-01-05T10-38
+**********Added********** 
+Added the following to the DB 
+[9, 8, 10, 'CHALYSM']
+
+2026-01-05T10-38 - No logs 
+2026-01-05T10-44 - No logs 
+2026-01-05T10-44 - No logs 
+2026-01-05T10-45
+**********Added********** 
+Added the following to the DB 
+[14, 7, 4, 'CHAVIL']
+
+2026-01-05T10-45 - No logs 
+2026-01-05T10-45 - No logs 
+2026-01-05T10-45 - No logs 
+2026-01-05T10-45 - No logs 
+2026-01-05T10-47 - No logs 
+2026-01-05T10-47 - No logs 
+2026-01-05T11-56
+**********Added********** 
+Added the following to the DB 
+[19, 1, 1, 'LYSMAAL']
+
+2026-01-05T11-56 - No logs 
+2026-01-05T11-56 - No logs 
+2026-01-05T13-51 - No logs 
+2026-01-05T13-51 - No logs 
+2026-01-05T13-51 - No logs 
+2026-01-05T14-02 - No logs 
+2026-01-05T14-03 - No logs 
+2026-01-05T14-03 - No logs 
+2026-02-04T20-55 - No logs 
+2026-02-04T20-56 - No logs 
+2026-02-04T20-58 - No logs 
+2026-02-04T20-58 - No logs 
+2026-02-04T21-24 - No logs 
+2026-02-04T21-24 - No logs 
+2026-02-04T21-24 - No logs 
+2026-02-04T21-24 - No logs 
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[20, 1, 24, 'CHAHDMIIM']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[21, 1, 37, 'CHADPORT']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[22, 1, 3, 'CHAUSBC']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[23, 1, 15, 'CHAUSBMC']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[24, 1, 2, 'CHAUSBAA']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[25, 1, 6, 'CHAUSBAC']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[26, 1, 1, 'CHAUSB3B']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[27, 1, 3, 'CHAUSBAB']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[28, 1, 32, 'CHALZHS']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[29, 1, 9, 'CHAHOSK']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[30, 1, 14, 'CHAHORM']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[31, 1, 11, 'CHAHOHS']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[32, 1, 2, 'CHAHDMIL']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[33, 1, 5, 'CHAMAC']
+
+2026-02-04T21-27
+**********Added********** 
+Added the following to the DB 
+[34, 1, 2, 'CHAVAT']
+
+2026-02-04T21-27 - No logs 
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Hdmi m til hdmi m kabel', 'CHAHDMIIM', 'Imlager', 24)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Display-port m til display-port m kabel', 'CHADPORT', 'Imlager', 37)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb-c til usb-c', 'CHAUSBC', 'Imlager', 3)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb-a til usb-micro', 'CHAUSBMC', 'Imlager', 15)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb-a til usb-a', 'CHAUSBAA', 'Imlager', 2)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb-a til usb-c', 'CHAUSBAC', 'Imlager', 6)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb-a til usb-3b', 'CHAUSB3B', 'Imlager', 1)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb-a til usb-b', 'CHAUSBAB', 'Imlager', 3)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Logitech zone learn headsett med aux', 'CHALZHS', 'Imlager', 32)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Hp omen sequencer keyboard', 'CHAHOSK', 'Imlager', 9)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Hp omen reactor mouse', 'CHAHORM', 'Imlager', 14)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Hp omen headsett', 'CHAHOHS', 'Imlager', 11)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('5m hdmi til hdmi kabel', 'CHAHDMIL', 'Tvstudio', 2)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Macmini', 'CHAMAC', 'Verksted', 5)
+
+2026-02-04T21-42
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Vater', 'CHAVAT', 'Verksted', 2)
+
+2026-02-04T21-42 - No logs 
+2026-02-04T21-48 - No logs 
+2026-02-04T21-48 - No logs 
+2026-02-04T21-48 - No logs 
+2026-02-04T21-49 - No logs 

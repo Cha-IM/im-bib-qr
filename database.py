@@ -5,7 +5,7 @@ from utils import now, NotFoundError, ValidationError
 
 DB_PATH = Path("inventory.db")
 DB_TEST = Path("test.db")
-MIN_LEN = 7
+MIN_LEN = 8
 
 
 
@@ -170,7 +170,16 @@ class DB:
         else:
             raise ValidationError("Category not added")
        
-        
+    def find_category_id(self,prefix:str)->int:
+        self.cursor.execute(
+            "SELECT id FROM categories WHERE prefix = ?", (prefix,)
+        )
+        row = self.cursor.fetchone()
+        if not row:
+            raise NotFoundError("Category not found")
+
+        return row[0]
+
 
     def find_prefix(self, category_id: int):
         self.cursor.execute(

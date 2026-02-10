@@ -1,11 +1,13 @@
 ### Funksjonalitet:
 from pathlib import Path
 import csv
-from database import DB
-from QR_writing import qr_pdf_generator
+from database import DB,DB_TEST
+from QR_writing import qr_pdf_generator, MAX_PAGE_QR
 from utils import now, check_path, ValidationError, NotFoundError
 from sqlite3 import IntegrityError
+from QR_writing import MAX_PAGE_QR
 
+PAGE_PRINT_TRESHOLD = 0.75 # Andel av siden som må være fylt før den ordinært skal printes. 
 """
 Behov:
 1. OK
@@ -66,7 +68,17 @@ def create_new_category_with_items(name: str, prefix: str, storage: str, count: 
                 db.logs.add("Error", str(e), (name,prefix, storage, count)) 
                 
             
-            
+def add_to_category(prefix:str, count:int):
+    prefix =prefix.strip().upper()
+    if not prefix.startswith("CHA"):
+        prefix = "CHA"+prefix
+    if count < 1:
+            raise ValidationError("count must be >= 1")   
+             
+    with DB() as db:
+        cat_id = db.find_category_id(prefix)
+        db.add_items(cat_id, count)
+    
 
 def create_new_categories_from_csv(filename: str, add_new_storages=False):
     """Takes inn a csv with the following headers:
@@ -79,7 +91,7 @@ def create_new_categories_from_csv(filename: str, add_new_storages=False):
 
     """
     inn_path = check_path(filename)
-    with open(inn_path, encoding="UTF-8", newline="") as f:
+    with open(inn_path, encoding="UTF-8-sig") as f:
         reader = csv.DictReader(f)
 
         data = [row for row in reader]
@@ -94,13 +106,22 @@ def create_new_categories_from_csv(filename: str, add_new_storages=False):
         
         for row in data:
             number = int(row["Number"])
-            prefix = row["Prefix"]
+            prefix = "CHA"+row["Prefix"]
             name = row["Name"]
             storage = row["Storage"]
             
             create_new_category_with_items(name, prefix, storage, number)
             
-
+def show_all_new():
+     with DB() as db:
+        to_print = db.fetch_not_printed()
+        a = ["ID", "CODE", "FG","BG"]
+        for row in [a,*to_print]:
+            for i in row:
+                print(f"{i:<11}",end="|")
+            print()
+        print(f"Antall: {len(to_print)}, printer {MAX_PAGE_QR} per side")
+        
 def print_all_new():
     """Generate pdf's for all items in the database yet to be printed.
     When QR_codes are printed it will update the items last printed values
@@ -114,6 +135,12 @@ def print_all_new():
         for id, prefix,fg,bg in to_print:
             items_list.append({"prefix":prefix, "fg":fg, "bg":bg})
             id_list.append(id)
+
+        # Fill-check
+        if (len(id_list) % MAX_PAGE_QR)/MAX_PAGE_QR < PAGE_PRINT_TRESHOLD: 
+            excess = len(id_list) % MAX_PAGE_QR
+            id_list = id_list[:len(id_list)-excess] #Hopper over de n - første elementene.
+            items_list = items_list[:len(id_list)-excess]
 
         
         qr_pdf_generator(items_list, name="new")
@@ -154,27 +181,32 @@ def show_all_categories():
             print(f"Antall: {row[-1]:5}")
 
 def add_storages():
-    add_storage("Videolager", "Yellow", "Black")
-    add_storage( "Kameralager", "Red", "White")
-    add_storage( "Spesialager", "Green", "White")
-    add_storage( "IMlager", "Orange", "Black")
-    add_storage( "TEST", "White", "Black")
+    # add_storage("TVstudio","173.216.230", "0.0.0.0")
+    # add_storage("Verksted","80.200.120", "0.0.0.0")
+    # add_storage("2IT","255.197.211", "0.0.0.0")
+    # add_storage("Videolager", "255. 170. 130", "0.0.0.0")
+    # add_storage("Fotolager",   "255. 220. 95",  "0.0.0.0") 
+    # add_storage("Spesialager", "200. 170. 220", "0.0.0.0")
+    # add_storage("IMlager",     "170. 220. 210", "0.0.0.0")
+    pass
 
 def demo():
     # Testing
  
     
-    add_storages()
-    create_new_categories_from_csv("test")
+    # add_storages()
+    # create_new_categories_from_csv("test_2")
     show_all_categories()
     # show_all_items()
-    if print_all_new():
-        print("All new QR's printed")
-    else:
-        print("No new QR's to print")
+    # if print_all_new():
+    #     print("All new QR's printed")
+    # else:
+    #     print("No new QR's to print")
     # show_all_items()
 
 
 
 if __name__ == "__main__":
     demo()
+    # add_storages()
+    

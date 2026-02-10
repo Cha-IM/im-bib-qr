@@ -1,0 +1,16 @@
+Prefix,Name,Storage,Number
+HDMIIM,HDMI M til HDMI M kabel,IMlager,24
+DPORT,DISPLAY-PORT M til DISPLAY-PORT M KABEL,IMlager,37
+USBC,USB-C til USB-C,IMlager,3
+USBMC,USB-A til USB-MICRO,IMlager,15
+USBAA,USB-A til USB-A,IMlager,2
+USBAC,USB-A til USB-C,IMlager,6
+USB3B,USB-A til USB-3B,IMlager,1
+USBAB,USB-A til USB-B,IMlager,3
+LZHS,Logitech Zone Learn Headsett med AUX,IMlager,32
+HOSK,HP OMEN Sequencer Keyboard,IMlager,9
+HORM,HP OMEN Reactor Mouse,IMlager,14
+HOHS,HP OMEN Headsett,IMlager,11
+HDMIL,5m HDMI til HDMI kabel,TVstudio,2
+MAC,MacMini,Verksted,5
+VAT,Vater,Verksted,2

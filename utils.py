@@ -23,3 +23,6 @@ def check_path(path:str,sufix=".csv"):
     return inn_path
 if __name__ == "__main__":
     print(now())
+
+
+            

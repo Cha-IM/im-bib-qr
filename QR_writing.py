@@ -5,6 +5,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
 
+
 from math import floor
 from utils import now
 
@@ -15,14 +16,15 @@ En funksjon som genererer en QRcode med valgt størrelse og farger. OK
 
 """
 
-QR_SIZE = 9 * mm
-CELL_PADDING = 2 * mm
+QR_SIZE = 6 * mm
+CELL_PADDING = 3 * mm
 MARGIN = 4 * mm
+BORDER_SIZE = 1
 FONT_SIZE = 6  # px
 FONT = "Helvetica"
 
 CELL_SIZE = QR_SIZE + 2 * CELL_PADDING
-ROW_WIDTH = CELL_SIZE
+ROW_WIDTH = CELL_SIZE+MARGIN
 ROW_HEIGHT = CELL_SIZE + 3 * FONT_SIZE
 
 # Number of QR's
@@ -36,25 +38,25 @@ DASH = [height / 100, height / 25]  # 1px drawing, 4px space
 LINE_WIDTH = 1  # px
 
 # Debug info:
-# print(width - 2 * MARGIN, height - 2 * MARGIN)
-# print(ROW_WIDTH, ROW_HEIGHT)
-# print(QR_ROWS, QR_COLS, MAX_PAGE_QR)
+print(width - 2 * MARGIN, height - 2 * MARGIN)
+print(ROW_WIDTH, ROW_HEIGHT)
+print(QR_ROWS, QR_COLS, MAX_PAGE_QR)
 
 
-def make_qr(prefix: str, **kwargs):
+def make_qr(prefix: str, fill):
     """Prints a QR-code with prefix as data"""
 
-    fill = kwargs.get("fg", "White")
-    back = kwargs.get("bg", "Black")
+    
     QR = qrcode.QRCode(
         version=1,
         error_correction=qrcode.ERROR_CORRECT_H,
         box_size=3,
-        border=1,
+        border=BORDER_SIZE,
     )
     QR.add_data(prefix)
     QR.make(fit=True)
-    return QR.make_image(fill_color=fill, back_color=back)
+    
+    return QR.make_image(fill_color="Black", back_color=fill)
 
 
 def draw_table(c: canvas.Canvas):
@@ -79,15 +81,14 @@ def qr_pdf_generator(items: list[dict[str,str]], name: str = ""):
     if name:
         name = f"{name}_{now()}.pdf"
     else:
-        name = f"{now()}.pdf"
-    # print(prefixes)
-    # print(name)
+        name = "test.pdf"
+    
     c = canvas.Canvas(name, pagesize=A4)
     c.setFont("Helvetica", FONT_SIZE)
 
     for i, item in enumerate(items):
         if i % MAX_PAGE_QR == 0 and i != 0:
-            draw_table(c)
+            # draw_table(c)
             c.showPage()
             c.setFont("Helvetica", FONT_SIZE)
             x, y = 0, 0
@@ -102,14 +103,25 @@ def qr_pdf_generator(items: list[dict[str,str]], name: str = ""):
         #     i
         # )
         prefix = item.pop("prefix")
-        img = make_qr(prefix, **item)
-
+        fill = item.get("fg", "255. 255. 255")
+        back = item.get("bg","0. 0. 0")
+        fill_int = tuple(int(x) for x in fill.split("."))
+        fill = tuple(int(x)/255 for x in fill.split("."))
+        back = tuple(int(x)/255 for x in back.split("."))
+        
+        img = make_qr(prefix,fill_int)
+        c.saveState()
         # legg til PDF.
+        # c.setFillColorRGB(*back)
+        c.setFillColorRGB(*fill)
+        c.rect(x + CELL_PADDING//2, y+CELL_PADDING//2, width= ROW_WIDTH - CELL_PADDING, height=CELL_SIZE+CELL_PADDING, fill=1)
+        c.restoreState()
         c.drawInlineImage(
-            img, x + CELL_PADDING, y + 3 * FONT_SIZE, width=QR_SIZE, height=QR_SIZE
+            img, x+MARGIN/2+CELL_PADDING, y + 3 * FONT_SIZE+CELL_PADDING, width=QR_SIZE, height=QR_SIZE
         )
 
-        t = c.beginText(x + CELL_PADDING, y + 2 * FONT_SIZE)
+        # c.setStrokeColorRGB(*back)
+        t = c.beginText(x + CELL_PADDING, y + 2 * FONT_SIZE+CELL_PADDING//2)
         size = c.stringWidth(prefix, FONT, FONT_SIZE)
         
         ratio = size / (ROW_WIDTH - 2 * CELL_PADDING)
@@ -137,9 +149,9 @@ def qr_pdf_generator(items: list[dict[str,str]], name: str = ""):
 if __name__ == "__main__":
     # img = make_qr("HEI0123", fill_color="Red", back_color="blue")
     # img.save("test.png")
-    prefixes = [ {"prefix":f"HEI00{i}", "fg":"Black", "bg":"White"}  for i in range(MAX_PAGE_QR - 1)]
-    prefixes.insert(0, {"prefix":f"qwertyuioølkioprtyqwertyuioølkioprty", "fg":"Black", "bg":"White"})
-    prefixes.insert(0, {"prefix":f"qwertyuioølkioprty", "fg":"Black", "bg":"White"})
-    prefixes.insert(0, {"prefix":f"qwertyui", "fg":"Black", "bg":"White"})
+    prefixes = [ {"prefix":f"HEI00{i}", "fg":"255. 0. 0", "bg":"255. 255. 255"}  for i in range(MAX_PAGE_QR - 1)]
+    prefixes.insert(0, {"prefix":f"qwertyuioølkioprtyqwertyuioølkioprty","fg":"255. 220. 95", "bg":"255. 255. 255"})
+    prefixes.insert(0, {"prefix":f"qwertyuioølkioprty", "fg":"255. 220. 95", "bg":"255. 255. 255"})
+    prefixes.insert(0, {"prefix":f"qwertyui", "fg":"255. 220. 95", "bg":"255. 255. 255"})
 
     qr_pdf_generator(prefixes)
