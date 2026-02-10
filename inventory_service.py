@@ -60,7 +60,6 @@ def create_new_category_with_items(name: str, prefix: str, storage: str, count: 
         if count < 1:
             raise ValidationError("count must be >= 1")
         with DB() as db:
-            db.validate_storage(storage)
             try:
                 category_id = db.add_category(name,prefix,storage)
                 db._add_items(category_id, 1, count, prefix)
@@ -76,10 +75,20 @@ def add_to_category(prefix:str, count:int):
             raise ValidationError("count must be >= 1")   
              
     with DB() as db:
-        cat_id = db.find_category_id(prefix)
+        cat_id = db.find_cat_id(prefix)
         db.add_items(cat_id, count)
     
+def remove_items_from_cat( cat_prefix:str, numbers:list[int]):
+    with DB() as db:
+        for i in numbers:
+            code = db.compute_item_code(cat_prefix, i)
+            db.remove_item_code(code) #TODO This is two lookups for each element, should be updated to use execute many both for ID lookup and deletion.
 
+def remove_item_from_cat( cat_prefix:str, number:int):
+    with DB() as db:
+        code = db.compute_item_code(cat_prefix, number)
+        db.remove_item_code(code) 
+        
 def create_new_categories_from_csv(filename: str, add_new_storages=False):
     """Takes inn a csv with the following headers:
         Prefix,Name,Storage,Number
@@ -167,6 +176,7 @@ def show_all_items():
                     i = "Never"
                 print(f"{i:<11}",end="|")
             print()
+
 
 
 def show_all_categories():

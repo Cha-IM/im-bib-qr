@@ -105,6 +105,7 @@ class DB:
 
         self.conn.commit()
         self._storage_to_ID()
+
     def __enter__(self):
             self.logs = Logger()
             return self
@@ -156,6 +157,8 @@ class DB:
     def add_category(self, name: str, prefix: str, storage_room_name: str):
         self.validate_storage(storage_room_name)
         storage_room_id = self.STORAGE.get(storage_room_name)
+        if not prefix.startswith("CHA"):
+            prefix = "CHA"+prefix
         try:
             self.cursor.execute(
                 "INSERT INTO categories (name, prefix, storage_room_id) VALUES (?, ?, ?)",
@@ -170,7 +173,7 @@ class DB:
         else:
             raise ValidationError("Category not added")
        
-    def find_category_id(self,prefix:str)->int:
+    def find_cat_id(self,prefix:str)->int:
         self.cursor.execute(
             "SELECT id FROM categories WHERE prefix = ?", (prefix,)
         )
@@ -181,7 +184,7 @@ class DB:
         return row[0]
 
 
-    def find_prefix(self, category_id: int):
+    def find_cat_prefix(self, category_id: int):
         self.cursor.execute(
             "SELECT prefix FROM categories WHERE id = ?", (category_id,)
         )
@@ -234,7 +237,7 @@ class DB:
 
     def _add_item(self, category_id: int, number: int)-> tuple[int,str]:
 
-        prefix = self.find_prefix(category_id)
+        prefix = self.find_cat_prefix(category_id)
         item_code = self.compute_item_code(prefix, number)
         self.cursor.execute(
             "INSERT INTO items (category_id, number, item_code) VALUES (?, ?, ?)",
@@ -258,7 +261,8 @@ class DB:
 
     def add_items(self, category_id: int, count: int)-> None:
         """ Adds items to an existing category, will add to the maximum in the category"""
-        prefix = self.find_prefix(category_id)
+        #TODO add option to "fill" category if empty spaces in the cat. c0 c1 c3 add_items(2) gives c0 c1 C2 c3 C4 instead of c0 c1 c3 C4 C5
+        prefix = self.find_cat_prefix(category_id)
         self.cursor.execute(
             """
                     SELECT MAX(number)
@@ -357,6 +361,11 @@ class DB:
         except:
             raise NotFoundError(f"{item_id}")
 
+    def remove_item_code(self, itemcode:str):
+        id = self.item_code_to_id(itemcode)
+        self.remove_item_id(id)
+
+  
     def fetch_categories_prefixes(self):
 
         self.cursor.execute(
@@ -397,17 +406,25 @@ def demo():
         db._add_item(com_id, 2)
 
         # Add multiple items with an item_group
-        db.add_items(cam_id, 100)
+        db.add_items(cam_id, 5)
 
         db.mark_qr_printed(2)
 
         # removing an obj from id:
         db.remove_item_id(1)
 
-
         # removing an obj from a prefix:
-        print(db.item_code_to_id("COM0002"))
+        db.remove_item_code("CAM00002")
 
+        # db.remove_items_from_cat("CAM",[4,5,6])
+        for item in db.fetch_items():
+            print(item)
+        for item in db.fetch_not_printed():
+            print(item)
+        for item in db.fetch_categories():
+            print(item)
+        
+        
 
 if __name__ == "__main__":
     demo()
