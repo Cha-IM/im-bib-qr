@@ -23,8 +23,8 @@ MARGIN = 0 * mm
 BORDER_SIZE = 1
 FONT_SIZE = 6  # px
 FONT = "Helvetica"
-
 CELL_PADDING_W = 2*CELL_PADDING
+
 CELL_H = QR_SIZE + 3 * CELL_PADDING +  2 * FONT_SIZE
 CELL_W = QR_SIZE + 2*CELL_PADDING_W
 ROW_WIDTH = CELL_W+MARGIN
@@ -135,7 +135,7 @@ def qr_pdf_generator(items: list[dict[str,str]], name: str = ""):
         t = c.beginText(x + CELL_PADDING, y + 2 * FONT_SIZE)
         size = c.stringWidth(prefix, FONT, FONT_SIZE)
         
-        ratio = size / (CELL_W)
+        ratio = size / (CELL_W-CELL_PADDING_W)
         if ratio > 1.5:
 
             n = len(prefix)
@@ -152,7 +152,7 @@ def qr_pdf_generator(items: list[dict[str,str]], name: str = ""):
         # c.drawString(x,y, prefix)
         c.setFontSize(FONT_SIZE)
 
-    draw_table(c)
+    # draw_table(c)
     c.showPage()
     c.save()
 
@@ -161,9 +161,10 @@ if __name__ == "__main__":
     # img = make_qr("HEI0123", fill_color="Red", back_color="blue")
     # img.save("test.png")
     prefixes = [ {"prefix":f"HEI00{i}", "fg":"255. 0. 0", "bg":"255. 255. 255"}  for i in range(MAX_PAGE_QR - 1)]
+    prefixes.extend ([ {"prefix":f"CHAT1TT{i}", "fg":"255. 0. 0", "bg":"255. 255. 255"}  for i in range(MAX_PAGE_QR - 1)])
     prefixes.insert(0, {"prefix":f"qwertyuioølkioprtyqwertyuioølkioprty","fg":"255. 220. 95", "bg":"255. 255. 255"})
     prefixes.insert(0, {"prefix":f"qwertyuioølkioprty", "fg":"255. 220. 95", "bg":"255. 255. 255"})
     prefixes.insert(0, {"prefix":f"qwertyui", "fg":"255. 220. 95", "bg":"255. 255. 255"})
     print(MAX_PAGE_QR)
     qr_pdf_generator(prefixes)
-    make_cutter_page()
+    # make_cutter_page()

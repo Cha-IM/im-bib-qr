@@ -1556,3 +1556,311 @@ UNIQUE constraint failed: categories.prefix
 2026-02-04T21-48 - No logs 
 2026-02-04T21-48 - No logs 
 2026-02-04T21-49 - No logs 
+2026-02-11T06-54 - No logs 
+2026-02-11T06-54 - No logs 
+2026-02-11T06-54 - No logs 
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[35, 1, 27, 'CHAODTH']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[36, 1, 40, 'CHA1MUS']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[37, 1, 16, 'CHA2MUS']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[38, 1, 10, 'CHA3MUS']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[39, 1, 27, 'CHAT1TT']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[40, 1, 14, 'CHAT2TT']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[41, 1, 41, 'CHAUHSD']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[42, 1, 31, 'CHATMUS']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[43, 1, 1, 'CHANINSW1']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[44, 1, 2, 'CHANINSW2']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[45, 1, 1, 'CHANINSW1G']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[46, 1, 1, 'CHANINSW2G']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[47, 1, 2, 'CHAUQH1']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[48, 1, 12, 'CHASW53V']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[49, 1, 29, 'CHASW9V']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[50, 1, 8, 'CHASW48V']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[51, 1, 56, 'CHARU12V']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[52, 1, 13, 'CHARULIT']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[53, 1, 30, 'CHAKM25']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[54, 1, 32, 'CHAKM24']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[55, 1, 1, 'CHASPCINT']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[56, 1, 26, 'CHASPCAMD']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[57, 1, 7, 'CHAHPPS']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[58, 1, 33, 'CHASAM1PS']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[59, 1, 30, 'CHAPHPS']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[60, 1, 4, 'CHASAM2PS']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[61, 1, 5, 'CHAT3TT']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[62, 1, 12, 'CHAT4TT']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[63, 1, 6, 'CHA4MUS']
+
+2026-02-11T06-54
+**********Added********** 
+Added the following to the DB 
+[64, 1, 1, 'CHA5MUS']
+
+2026-02-11T06-54 - No logs 
+2026-02-11T06-54 - No logs 
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Hdmi til displayport overgang', 'CHAODTH', 'Imlager', 27)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus - hp - mofyjo', 'CHA1MUS', 'Imlager', 40)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus - logitech m-u006', 'CHA2MUS', 'Imlager', 16)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus - lenovo mojuuo', 'CHA3MUS', 'Imlager', 10)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Tastatur - hp ku-1469', 'CHAT1TT', 'Imlager', 27)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Tastatur - logitech k120', 'CHAT2TT', 'Imlager', 14)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('2-port usb peripheral sharing device', 'CHAUHSD', 'Imlager', 41)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Voxicon wireless mouse dm-gr950-pro', 'CHATMUS', 'Imlager', 31)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Nintendo switch 1 kit', 'CHANINSW1', 'Imlager', 1)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Nintendo switch 2 kit', 'CHANINSW2', 'Imlager', 2)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Super smash bros ultimate', 'CHANINSW1G', 'Imlager', 1)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mariokart 8 deluxe', 'CHANINSW2G', 'Imlager', 1)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Oculus quest 1', 'CHAUQH1', 'Imlager', 2)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Switch - tp-link tl-sg108pe 53.5 v', 'CHASW53V', 'Imlager', 12)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Switch - tp-link tl-sg108 9v', 'CHASW9V', 'Imlager', 29)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Switch - unifi switch 8 60w us-860w 48v', 'CHASW48V', 'Imlager', 8)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Router - unifi usg 12v', 'CHARU12V', 'Imlager', 56)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Router - unifi uxg-lite', 'CHARULIT', 'Imlager', 13)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Vg2 it-pc (2025)', 'CHAKM25', '2it', 30)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Vg1 pc (2024)', 'CHAKM24', 'Imlager', 32)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Serverpc - intel', 'CHASPCINT', 'Imlager', 1)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Serverpc - amd', 'CHASPCAMD', 'Imlager', 26)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Hp 24" homep e243', 'CHAHPPS', 'Imlager', 7)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Samsung 27" f27t452gqr', 'CHASAM1PS', 'Imlager', 33)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Philips 24" 241b8q', 'CHAPHPS', 'Imlager', 30)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Samsung 24" s24f354huxen', 'CHASAM2PS', 'Imlager', 4)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Tastatur - dell kd216t', 'CHAT3TT', 'Imlager', 5)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Tastatur - lenovo - ekb-538a', 'CHAT4TT', 'Imlager', 12)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus - black ms116t1', 'CHA4MUS', 'Imlager', 6)
+
+2026-02-11T06-55
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus - hp wired mouse - tpa-l001m', 'CHA5MUS', 'Imlager', 1)
+
+2026-02-11T06-55 - No logs 
+2026-02-11T06-55 - No logs 
+2026-02-11T06-55 - No logs 

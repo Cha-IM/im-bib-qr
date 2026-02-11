@@ -7,7 +7,7 @@ from utils import now, check_path, ValidationError, NotFoundError
 from sqlite3 import IntegrityError
 from QR_writing import MAX_PAGE_QR
 
-PAGE_PRINT_TRESHOLD = 0.75 # Andel av siden som må være fylt før den ordinært skal printes. 
+PAGE_PRINT_TRESHOLD = 0.5 # Andel av siden som må være fylt før den ordinært skal printes. 
 """
 Behov:
 1. OK
@@ -129,7 +129,7 @@ def show_all_new():
             for i in row:
                 print(f"{i:<11}",end="|")
             print()
-        print(f"Antall: {len(to_print)}, printer {MAX_PAGE_QR} per side")
+        print(f"Antall: {len(to_print)}, printer {MAX_PAGE_QR} per side, {len(to_print)/MAX_PAGE_QR:.2f} sider ")
         
 def print_all_new():
     """Generate pdf's for all items in the database yet to be printed.
