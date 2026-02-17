@@ -1,2 +1,7 @@
 \nonuse
 __pycache__
+input_*
+test_*
+test.*
+*.pdf
+*.txt
