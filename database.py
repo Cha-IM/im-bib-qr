@@ -1,3 +1,4 @@
+# Datalayer, works on the db directly. CRUD.
 import sqlite3
 
 from pathlib import Path
@@ -336,11 +337,12 @@ class DB:
     def fetch_categories(self):
         self.cursor.execute(
             """
-            SELECT c.name, c.prefix, s.name AS storage_room, COALESCE(COUNT(i.id), 0)
+            SELECT c.prefix, s.name AS storage_room, COALESCE(COUNT(i.id), 0), c.name
             FROM categories c 
             JOIN storage_rooms s on c.storage_room_id = s.id
             LEFT JOIN items i on i.category_id = c.id
             GROUP BY c.prefix
+            ORDER BY s.name
             """
         )
         return self.cursor.fetchall()

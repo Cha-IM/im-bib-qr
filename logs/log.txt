@@ -1864,3 +1864,348 @@ UNIQUE constraint failed: categories.prefix
 2026-02-11T06-55 - No logs 
 2026-02-11T06-55 - No logs 
 2026-02-11T06-55 - No logs 
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Hdmi til displayport overgang', 'CHAODTH', 'Imlager', 27)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus - hp - mofyjo', 'CHA1MUS', 'Imlager', 40)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus - logitech m-u006', 'CHA2MUS', 'Imlager', 16)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus - lenovo mojuuo', 'CHA3MUS', 'Imlager', 10)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Tastatur - hp ku-1469', 'CHAT1TT', 'Imlager', 27)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Tastatur - logitech k120', 'CHAT2TT', 'Imlager', 14)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('2-port usb peripheral sharing device', 'CHAUHSD', 'Imlager', 41)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Voxicon wireless mouse dm-gr950-pro', 'CHATMUS', 'Imlager', 31)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Nintendo switch 1 kit', 'CHANINSW1', 'Imlager', 1)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Nintendo switch 2 kit', 'CHANINSW2', 'Imlager', 2)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Super smash bros ultimate', 'CHANINSW1G', 'Imlager', 1)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mariokart 8 deluxe', 'CHANINSW2G', 'Imlager', 1)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Oculus quest 1', 'CHAUQH1', 'Imlager', 2)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Switch - tp-link tl-sg108pe 53.5 v', 'CHASW53V', 'Imlager', 12)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Switch - tp-link tl-sg108 9v', 'CHASW9V', 'Imlager', 29)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Switch - unifi switch 8 60w us-860w 48v', 'CHASW48V', 'Imlager', 8)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Router - unifi usg 12v', 'CHARU12V', 'Imlager', 56)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Router - unifi uxg-lite', 'CHARULIT', 'Imlager', 13)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Vg2 it-pc (2025)', 'CHAKM25', '2it', 30)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Vg1 pc (2024)', 'CHAKM24', 'Imlager', 32)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Serverpc - intel', 'CHASPCINT', 'Imlager', 1)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Serverpc - amd', 'CHASPCAMD', 'Imlager', 26)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Hp 24" homep e243', 'CHAHPPS', 'Imlager', 7)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Samsung 27" f27t452gqr', 'CHASAM1PS', 'Imlager', 33)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Philips 24" 241b8q', 'CHAPHPS', 'Imlager', 30)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Samsung 24" s24f354huxen', 'CHASAM2PS', 'Imlager', 4)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Tastatur - dell kd216t', 'CHAT3TT', 'Imlager', 5)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Tastatur - lenovo - ekb-538a', 'CHAT4TT', 'Imlager', 12)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus - black ms116t1', 'CHA4MUS', 'Imlager', 6)
+
+2026-02-17T11-53
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus - hp wired mouse - tpa-l001m', 'CHA5MUS', 'Imlager', 1)
+
+2026-02-17T11-53 - No logs 
+2026-02-17T11-53 - No logs 
+2026-02-17T11-53 - No logs 
+2026-02-17T12-16 - No logs 
+2026-02-17T12-20 - No logs 
+2026-02-17T12-20 - No logs 
+2026-02-17T12-20 - No logs 
+2026-02-17T12-20 - No logs 
+2026-02-17T12-22 - No logs 
+2026-02-17T12-27 - No logs 
+2026-02-17T12-27 - No logs 
+2026-02-17T12-27 - No logs 
+2026-02-17T12-28 - No logs 
+2026-02-17T12-32 - No logs 
+2026-02-17T12-32 - No logs 
+2026-02-17T12-33 - No logs 
+2026-02-17T12-33 - No logs 
+2026-02-17T12-34 - No logs 
+2026-02-17T12-36 - No logs 
+2026-02-17T12-37 - No logs 
+2026-02-17T12-39 - No logs 
+2026-02-17T12-40 - No logs 
+2026-02-17T12-40 - No logs 
+2026-02-17T12-40 - No logs 
+2026-02-17T12-42 - No logs 
+2026-02-17T12-43 - No logs 
+2026-02-17T12-43 - No logs 
+2026-02-17T12-44 - No logs 
+2026-02-17T12-48 - No logs 
+2026-02-17T12-49 - No logs 
+2026-02-17T12-50 - No logs 
+2026-02-17T12-52 - No logs 
+2026-02-17T12-54 - No logs 
+2026-02-17T12-55 - No logs 
+2026-02-17T12-56 - No logs 
+2026-02-17T12-57 - No logs 
+2026-02-17T12-58 - No logs 
+2026-02-17T12-58 - No logs 
+2026-02-17T12-58 - No logs 
+2026-02-17T12-58 - No logs 
+2026-02-17T12-58 - No logs 
+2026-02-17T12-58 - No logs 
+2026-02-17T12-58 - No logs 
+2026-02-17T13-09 - No logs 
+2026-02-17T13-09 - No logs 
+2026-02-17T13-10 - No logs 
+2026-02-17T13-10 - No logs 
+2026-02-17T13-10 - No logs 
+2026-02-17T13-10 - No logs 
+2026-02-17T13-13 - No logs 
+2026-02-17T13-13 - No logs 
+2026-02-17T13-13 - No logs 
+2026-02-17T13-13 - No logs 
+2026-02-17T13-13 - No logs 
+2026-02-17T13-13 - No logs 
+2026-02-17T13-14 - No logs 
+2026-02-17T13-14 - No logs 
+2026-02-17T13-14 - No logs 
+2026-02-17T13-14 - No logs 
+2026-02-17T13-14 - No logs 
+2026-02-17T13-14 - No logs 
+2026-02-17T13-14 - No logs 
+2026-02-17T13-14 - No logs 
+2026-02-17T13-15 - No logs 
+2026-02-17T13-15 - No logs 
+2026-02-17T13-21 - No logs 
+2026-02-17T13-21 - No logs 
+2026-02-17T13-22 - No logs 
+2026-02-17T13-22 - No logs 
+2026-02-17T13-22 - No logs 
+2026-02-17T13-22 - No logs 
+2026-02-17T13-25 - No logs 
+2026-02-17T13-25 - No logs 
+2026-02-17T13-38 - No logs 
+2026-02-17T13-38 - No logs 
+2026-02-17T13-38 - No logs 
+2026-02-17T13-38 - No logs 
+2026-02-17T13-38 - No logs 
+2026-02-17T13-38 - No logs 
+2026-02-17T13-38 - No logs 
+2026-02-17T13-38 - No logs 
+2026-02-17T13-39 - No logs 
+2026-02-17T13-39 - No logs 
+2026-02-17T13-39 - No logs 
+2026-02-17T13-39 - No logs 
+2026-02-17T13-40 - No logs 
+2026-02-17T13-40 - No logs 
+2026-02-17T13-42 - No logs 
+2026-02-17T13-42 - No logs 
+2026-02-17T13-45 - No logs 
+2026-02-17T13-45 - No logs 
+2026-02-17T13-46 - No logs 
+2026-02-17T13-46 - No logs 
+2026-02-17T13-46 - No logs 
+2026-02-17T13-46 - No logs 
+2026-02-17T13-47 - No logs 
+2026-02-17T13-47 - No logs 
+2026-02-17T13-48 - No logs 
+2026-02-17T13-48 - No logs 
+2026-02-17T13-49 - No logs 
+2026-02-17T13-49 - No logs 
+2026-02-17T13-50 - No logs 
+2026-02-17T13-50 - No logs 
+2026-02-17T13-51 - No logs 
+2026-02-17T13-51 - No logs 
+2026-02-17T13-51 - No logs 
+2026-02-17T13-51 - No logs 
+2026-02-17T13-51 - No logs 
+2026-02-17T13-51 - No logs 
+2026-02-17T13-51 - No logs 
+2026-02-17T13-51 - No logs 
+2026-02-17T13-51 - No logs 
+2026-02-17T13-51 - No logs 
+2026-02-17T13-53 - No logs 
+2026-02-17T13-53 - No logs 
+2026-02-17T13-53 - No logs 
+2026-02-17T13-53 - No logs 
+2026-02-17T13-53 - No logs 
+2026-02-17T13-53 - No logs 
+2026-02-17T13-53 - No logs 
+2026-02-17T13-53 - No logs 
+2026-02-17T13-54 - No logs 
+2026-02-17T13-54 - No logs 
+2026-02-17T13-56 - No logs 
+2026-02-17T13-56 - No logs 
+2026-02-17T13-56 - No logs 
+2026-02-17T13-56 - No logs 
+2026-02-17T13-56 - No logs 
+2026-02-17T13-56 - No logs 
+2026-02-17T13-58 - No logs 
+2026-02-17T13-58 - No logs 
+2026-02-17T13-58 - No logs 
+2026-02-17T13-58 - No logs 
+2026-02-17T14-13 - No logs 
+2026-02-17T14-13 - No logs 
+2026-02-17T14-14 - No logs 
+2026-02-17T14-14 - No logs 
+2026-02-17T14-15 - No logs 
+2026-02-17T14-15 - No logs 
+2026-02-17T14-19 - No logs 
+2026-02-17T14-19 - No logs 
+2026-02-17T14-20 - No logs 
+2026-02-17T14-20 - No logs 
+2026-02-17T14-20 - No logs 
+2026-02-17T14-20 - No logs 
+2026-02-17T14-20 - No logs 
+2026-02-17T14-20 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-22 - No logs 
+2026-02-17T14-23 - No logs 
+2026-02-17T14-23 - No logs 
+2026-02-17T14-24 - No logs 
+2026-02-17T14-24 - No logs 
+2026-02-17T14-24 - No logs 
+2026-02-17T14-24 - No logs 
+2026-02-17T14-24 - No logs 
+2026-02-17T14-24 - No logs 
+2026-02-17T14-25 - No logs 
+2026-02-17T14-25 - No logs 
+2026-02-17T14-26 - No logs 
+2026-02-17T14-26 - No logs 
+2026-02-17T14-28 - No logs 
+2026-02-17T14-28 - No logs 
+2026-02-17T14-29 - No logs 
+2026-02-17T14-29 - No logs 
+2026-02-17T14-29 - No logs 
+2026-02-17T14-29 - No logs 
+2026-02-17T14-29 - No logs 
+2026-02-17T14-29 - No logs 
+2026-02-17T14-30 - No logs 
+2026-02-17T14-30 - No logs 
+2026-02-17T14-30 - No logs 
+2026-02-17T14-30 - No logs 
+2026-02-17T14-31 - No logs 
+2026-02-17T14-31 - No logs 
+2026-02-17T14-31 - No logs 
+2026-02-17T14-31 - No logs 
+2026-02-17T14-32 - No logs 
+2026-02-17T14-32 - No logs 

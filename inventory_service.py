@@ -1,4 +1,5 @@
 ### Funksjonalitet:
+# Bruker datalaget til å gjøre sammensatte funksjoner.
 from pathlib import Path
 import csv
 from database import DB,DB_TEST
@@ -8,48 +9,6 @@ from sqlite3 import IntegrityError
 from QR_writing import MAX_PAGE_QR
 
 PAGE_PRINT_TRESHOLD = 0.5 # Andel av siden som må være fylt før den ordinært skal printes. 
-"""
-Behov:
-1. OK
-Legge flere nye kategorier av ting fra csv som er formatert på følgende måte:
-    Kategori_prefix, Navn, Lager_rom, Antall_i_kategori
-Legger til kun nye kategorier, slik at om man kjører samme csv.fil flere ganger legges kun nye elementer til. 
-
-F.eks
-CAM, Kamera, Video, 11 -> Legger til 11 kamera til Video_lageret med koder: CAM0001 til CAM0011
-
-Trenger:
-2. OK
-Legge til Lager_rom
-Oversikt over Lagerrom navn til ID, lage en dict/funksjon.  
-
-
-3. OK
-Genererer QR-koder
-Skriv ut QR kode til alle uten QR_kode. 
-
-4. 
-Oppdatere innhold, legge til og fjerne enkelt ting. 
-Legge til flere ting. 
-
-5. Skrive ut ny QR-kode til enkelt items.
-
-6. Oversikter over hva som er i DB. 
-OK-Alle items
-
-7. Resultater av csv importeringer, med logger. OK, ish. Kan ikke bruke disse til noe senere. 
-En csv logg for items som allerede var i DB - Ok.
-En csv logg med ny opprettede lager og Items.  - Nei, legger aldri til Lager med .csv, må gjøres eksplisitt.
-
-Farger koblet til rom? 
-
-"""
-
-"""
-Ønsker: 
-Grafisk med tkinter, ikke kun script?
-
-"""
 HEADERS = ["Prefix", "Name", "Storage", "Number"]
 
 def create_new_category_with_items(name: str, prefix: str, storage: str, count: int):
@@ -168,28 +127,42 @@ def add_storage(name:str, fg:str, bg:str):
 
 
 def show_all_items():
-    with DB() as db:
-        a = ["ID", "CODE", "number", "name", "storage" ,"qr_count", "qr_print_at"]
-        for row in [a,*db.fetch_items()]:
+        data = fetch_all_items()
+        for row in data:
             for i in row:
                 if i == None:
                     i = "Never"
                 print(f"{i:<11}",end="|")
             print()
 
-
+def fetch_all_items():
+    """ Returns a list of all db items, first index is headers"""
+    with DB() as db:
+        a = ["ID", "CODE", "number", "name", "storage" ,"qr_count", "qr_print_at"]
+        data = [a,*db.fetch_items()]
+    return data
 
 def show_all_categories():
-    for i in ["Name", "Prefix", "Storage_Name", "Count"]:
+    data = fetch_all_categories()
+    
+    for i in data.pop(0):
         print(f"{i:13}", end="")
     print()
-    with DB() as db:
-        for row in db.fetch_categories():
-            print(f"{row[0].title():13}", end="")
-            for i in row[1:-1]:
-                print(f"{i:13}", end="")
-            print(f"Antall: {row[-1]:5}")
+    for row in data:
+        print(f"{row[0].title():13}", end="")
+        for i in row[1:-1]:
+            print(f"{i:13}", end="")
+        print(f"Antall: {row[-1]:5}")
 
+def fetch_all_categories()->list:
+    a = ["Prefix", "Storage", "Count", "Name"]
+    with DB() as db:
+        data =  [a,*db.fetch_categories()]
+        return data
+
+def fetch_all_storages()->list[str]:
+    with DB() as db:
+        return list(db.STORAGE.keys())
 def add_storages():
     # add_storage("TVstudio","173.216.230", "0.0.0.0")
     # add_storage("Verksted","80.200.120", "0.0.0.0")
@@ -206,8 +179,8 @@ def demo():
     
     # add_storages()
     # create_new_categories_from_csv("test_2")
-    show_all_categories()
-    # show_all_items()
+    # show_all_categories()
+    show_all_items()
     # if print_all_new():
     #     print("All new QR's printed")
     # else:
