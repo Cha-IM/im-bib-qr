@@ -146,6 +146,14 @@ class Gui(tk.Tk):
         font = Font(output, output.cget("font"))
         font.config(weight="bold")
         output.tag_configure('fet', font=font)
+        
+        output.configure(cursor="arrow", takefocus=0, exportselection=False)
+        for seq in ("<Key>", "<<Paste>>", "<<Cut>>", "<Control-v>", "<Control-x>", "<Control-Shift-V>"):
+            output.bind(seq, lambda e: "break")
+        for seq in ("<Button-1>", "<B1-Motion>", "<Shift-Button-1>",
+                    "<Double-Button-1>", "<Triple-Button-1>", "<Control-a>"):
+            output.bind(seq, lambda e: "break")
+       
 
         # Menyfelt
         meny:dict[str,tk.BooleanVar] = {}
@@ -178,11 +186,11 @@ class Gui(tk.Tk):
                     text += "\n"
 
        
-            output['state'] = 'normal'
+            
             output.delete("1.0",tk.END)
             output.insert('1.0', text, "marg")
             output.tag_add("fet", "1.0", "1.end")
-            output['state'] = 'disabled'
+           
 
         if room_index:
             rooms = fetch_all_storages() 
