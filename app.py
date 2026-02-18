@@ -1,6 +1,6 @@
 # Endpoint, bruker inventory_service for å lage gui
-from inventory_service import print_all_new, create_new_categories_from_csv, add_to_category,fetch_all_items,show_all_items,show_all_new,fetch_all_categories, fetch_all_storages,create_new_category_with_items, show_all_categories
-
+from inventory_service import print_all_new, create_new_categories_from_csv, add_to_category,show_all_items,show_all_new,create_new_category_with_items, show_all_categories
+from inventory_service import fetch_all_new,fetch_all_categories, fetch_all_storages, fetch_all_items
 import tkinter as tk
 from tkinter import ttk
 from tkinter.font import Font
@@ -23,16 +23,22 @@ class App:
     def __init__(self):
         '''Opprett en Gui-instans og hent data'''
         self.gui = Gui(self)
+        
+        self.gui.show_cats_request()
 
 
     def handle_request(self, request):
         '''Behandle forespørselen og be gui om å vise resultatet'''
         """ hvordan sortere? 
             Vis alle kategorier  - CHECK
-            Vis enkelt-rom : 
-            Vis alle rom, alle nye, alle items etc. 
-                Behøver egentlig hente hele db og så filtrere?
-                Alle items er en veldig dårlig ide... 
+            Vise utvalg av kategorier - CHECK.
+            Vise alle items - Check
+            Vise alle nye items - Check
+            Vise utvalg av items fra ulike rom - Check
+
+            Søk på kategorier fra navn - ?
+            
+
             Så velg enkelt rader -> checkboxbtn's 
             Enten skriv ut på nytt
             Legg til/fyll på items i en kategori
@@ -47,23 +53,33 @@ class App:
             Ha noen standard filter øverst? Ja, som persister over ulike faner. 
 
             """
+      
+        self.gui.setup_controls()
         if request == 'show_all_cats':
             data=fetch_all_categories()
+            self.gui.set_menu(self.gui.update_table_text)
             self.gui.display_table(data)
         elif request == "show_storages":
-            pass
+            data=fetch_all_items()
+            self.gui.set_menu(self.gui.update_table_text,False)
+            self.gui.display_table(data)
+        elif request == "show_prints":
+            data = fetch_all_new()
+            self.gui.set_menu(self.gui.update_table_text)
+            self.gui.display_table(data)
 
 
     def run(self):
         '''Start hendelsessløyfen og hold vinduet åpent'''
         self.gui.mainloop()
+        
 
 class Gui(tk.Tk):
     def __init__(self,app):
         '''opprett GUI-vindu med kontroll- og visningsområder'''
         super().__init__()
         # Lagre en referanse til app-instansen
-        self.app = app
+        self.app:App = app
         # Vindustittel, størrelse og sentrering
         self.title("IM BIBQR SYS")
         self.FONT_SIZE = 18
@@ -71,6 +87,8 @@ class Gui(tk.Tk):
         bs, hs = self.winfo_screenwidth(), self.winfo_screenheight()
         self.geometry(f'{b}x{h}+{bs//2-b//2}+{hs//2-h//2}')
         self.resizable(False, False)
+
+        
 
         if platform.system() == "Windows":
             font = ('Consolas', self.FONT_SIZE)
@@ -83,7 +101,12 @@ class Gui(tk.Tk):
         # Kontrollområde for valg av visning
         self.controls_frame = tk.Frame(self, relief='raised', bd=1)
         self.controls_frame.pack(side=tk.TOP, fill='x')
-        self.setup_controls()
+        self.controls = {
+            'Vis alle \n kategorier':self.show_cats_request,
+            'Vis \n lagerrom':self.show_rooms_request,
+            'Vis nye \n ting':self.show_prints_request,
+        }
+        self.current  = None
 
         # Visnngsområde
         self.display_frame = tk.Frame(self)
@@ -91,44 +114,89 @@ class Gui(tk.Tk):
         # Meny
         self.meny_frame = tk.Frame(self, relief="solid")
         self.meny_frame.pack(side=tk.LEFT)
+        self.meny_vals:dict[str,tk.BooleanVar] = {}
+        
+        
+        
 
+        
     def setup_controls(self):
         '''Opprett kontroller for valg av visning'''
-        tk.Button(self.controls_frame, text='Vis alle \n kategorier',
-                  command=self.show_cats_request).grid(
-            row=0, column=0, padx=10, pady=10)
-        tk.Button(self.controls_frame, text='Vis alle \n lagerrom',
-                  command=self.show_rooms_request).grid(
-            row=0, column=1, padx=10, pady=10)
+        for widget in self.controls_frame.winfo_children():
+            widget.destroy()    
+        col = 0
+       
+        for text,function in self.controls.items():
+            if self.current == function:
+                
+                btn = tk.Button(self.controls_frame, text=text,
+                    command=function, border=0, borderwidth=5)
+            else:
+                btn = tk.Button(self.controls_frame, text=text,
+                    command=function)
+            btn.grid(
+                row=0, column=col, padx=10, pady=10)
+            col += 1
+        # tk.Button(self.controls_frame, text='Vis \n lagerrom',
+        #           command=self.show_rooms_request, ).grid(
+        #     row=0, column=1, padx=10, pady=10)
+        # tk.Button(self.controls_frame, text='Vis nye \n',
+        #           command=self.show_prints_request).grid(
+        #     row=0, column=2, padx=10, pady=10)
 
     def show_cats_request(self):
         '''
         Be app om å behandle forespørselen,
         som deretter ber gui om å vise resultatet i en tabell
         '''
+        self.current = self.show_cats_request
         self.app.handle_request('show_all_cats')
 
     def show_rooms_request(self):
-        '''
-        Be app om å behandle forespørselen,
-        som deretter ber gui om å vise resultatet i en graf
-        '''
+        self.current = self.show_rooms_request
         self.app.handle_request('show_storages')
 
-    
+    def show_prints_request(self):
+        self.current = self.show_prints_request
+        self.app.handle_request('show_prints')
+
+   
+        
+            
+        
+    def set_menu(self, onclick, inital_val = True, ):
+        # Menyfelt
+        rooms = fetch_all_storages()
+        for i,storage in enumerate(rooms):
+            self.meny_vals[storage] = tk.BooleanVar()
+            # self.meny_vals[storage].set(inital_val)
+         
+            btn= tk.Checkbutton(self.meny_frame,text=storage,onvalue=True, offvalue=False,variable=self.meny_vals[storage], command=onclick)
+            
+            if inital_val:
+                btn.select()
+
+            btn.grid(row=i , column=0, sticky = "w")    
+        
+           
+    def set_room_index(self)->None:
+        for i,j in enumerate(self.data[0]):
+            if j.lower() == "storage":
+                self.room_index = i
+
     def display_table(self, data:list):
         '''Vis tekst i visningsområdet'''
-        self.clear_display_frame()
-        vals = [0]*len(data[0])
-        room_index = None
-        for i,j in enumerate(data[0]):
-            if j == "Storage":
-                room_index = i
+        self.clear_display()
+        self.vals = [0]*len(data[0])
+        self.data = data
+        self.set_room_index()
+
+        
 
         # Find len of rows:
         for row in data:
             for i, info in enumerate(row):
-                vals[i] = max( vals[i], len(str(info)) )
+                self.vals[i] = max( self.vals[i], len(str(info)) )
        
 
         # Tekstfelt
@@ -153,75 +221,50 @@ class Gui(tk.Tk):
         for seq in ("<Button-1>", "<B1-Motion>", "<Shift-Button-1>",
                     "<Double-Button-1>", "<Triple-Button-1>", "<Control-a>"):
             output.bind(seq, lambda e: "break")
-       
+        self.output = output
 
-        # Menyfelt
-        meny:dict[str,tk.BooleanVar] = {}
-        # Updating the meny text with this internal function
-        def update_meny_text(): 
-           
-            for i,j in meny.items():
-                print(i,j.get())
-            
-            text = ""
-            # Header
-            for i,info in enumerate(data[0]):
-                text += f"{info:<{vals[i]}} "
-            text += "\n"
-            # If rooms filter
-            if room_index:
-                for row in data[1:]:
-                    room:str = row[room_index]
-                    if meny[room].get():
-                        for i,info in enumerate(row):
-                            text += f"{info:<{vals[i]}} "
-                        text += "\n"
+        self.update_table_text()
 
-            else:
-            # Prepp text
-                text = ""
-                for row in data:
+
+    def update_table_text(self): 
+        text = ""
+        # Header
+        for i,info in enumerate(self.data[0]):
+            text += f"{info:<{self.vals[i]}} "
+        text += "\n"
+        # If rooms filter
+        if self.room_index:
+            for row in self.data[1:]:
+                room:str = row[self.room_index]
+                if self.meny_vals[room].get():
                     for i,info in enumerate(row):
-                        text += f"{info:<{vals[i]}} "
+                        text += f"{info:<{self.vals[i]}} "
                     text += "\n"
 
-       
-            
-            output.delete("1.0",tk.END)
-            output.insert('1.0', text, "marg")
-            output.tag_add("fet", "1.0", "1.end")
+        else:
+        # Prepp text
+            text = ""
+            for row in self.data:
+                for i,info in enumerate(row):
+                    text += f"{info:<{self.vals[i]}} "
+                text += "\n"
+
+
+        
+        self.output.delete("1.0",tk.END)
+        self.output.insert('1.0', text, "marg")
+        self.output.tag_add("fet", "1.0", "1.end")
            
 
-        if room_index:
-            rooms = fetch_all_storages() 
-            for i,storage in enumerate( rooms):
-                meny[storage] = tk.BooleanVar()
-                btn= tk.Checkbutton(self.meny_frame,text=storage,onvalue=True, offvalue=False,variable=meny[storage], command=update_meny_text)
-                btn.select()
-                btn.grid(row=i , column=0, sticky = "w")    
-            # tk.Button(meny_frame,text="test",).pack(side='left', fill="y",ipadx=10)
 
-        update_meny_text()
+        
 
-       
-
-    def display_graph(self, data, title):
-        '''Vis graf i visningsområdet'''
-        pass
-        # self.clear_display_frame()
-        # sns.set_theme()
-        # fig, ax = plt.subplots(figsize=(6, 4))
-        # sns.barplot(data=data, x='Navn', y='Alder', ax=ax)
-        # ax.set_title(title)
-        # plt.tight_layout()
-        # canvas = FigureCanvasTkAgg(fig, master=self.display_frame)
-        # canvas.draw()
-        # canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
-
-    def clear_display_frame(self) -> None:
+    def clear_display(self) -> None:
         '''Fjern alle widgeter fra visningsområdet (før ny visning)'''
         for widget in self.display_frame.winfo_children():
             widget.destroy()
+        # for widget in self.meny_frame.winfo_children():
+        #     widget.destroy()
 
     def destroy(self) -> None:
         '''

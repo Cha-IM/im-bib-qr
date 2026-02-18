@@ -323,7 +323,7 @@ class DB:
 
         self.cursor.execute(
             """
-            SELECT i.id, i.item_code, i.number, c.name AS category_name, s.name AS storage_room , i.qr_print_count, i.qr_print_at
+            SELECT i.item_code, s.name AS storage_room , i.qr_print_count, i.qr_print_at,  i.number, c.name AS category_name
             FROM items i
             JOIN categories c ON i.category_id = c.id
             JOIN storage_rooms s ON c.storage_room_id = s.id

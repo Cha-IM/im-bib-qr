@@ -81,15 +81,19 @@ def create_new_categories_from_csv(filename: str, add_new_storages=False):
             create_new_category_with_items(name, prefix, storage, number)
             
 def show_all_new():
+    data = fetch_all_new()
+    for row in data:
+        for i in row:
+            print(f"{i:<11}",end="|")
+        print()
+    print(f"Antall: {len(data)-1}, printer {MAX_PAGE_QR} per side, {len(data)-1/MAX_PAGE_QR:.2f} sider ")
+
+def fetch_all_new()->list[list[str]]:
      with DB() as db:
         to_print = db.fetch_not_printed()
         a = ["ID", "CODE", "FG","BG"]
-        for row in [a,*to_print]:
-            for i in row:
-                print(f"{i:<11}",end="|")
-            print()
-        print(f"Antall: {len(to_print)}, printer {MAX_PAGE_QR} per side, {len(to_print)/MAX_PAGE_QR:.2f} sider ")
-        
+        return [a,*to_print]    
+     
 def print_all_new():
     """Generate pdf's for all items in the database yet to be printed.
     When QR_codes are printed it will update the items last printed values
@@ -138,7 +142,8 @@ def show_all_items():
 def fetch_all_items():
     """ Returns a list of all db items, first index is headers"""
     with DB() as db:
-        a = ["ID", "CODE", "number", "name", "storage" ,"qr_count", "qr_print_at"]
+        a = ["Code", "Storage", "QR_count","Last printed", "Num", "Category Name"]
+            
         data = [a,*db.fetch_items()]
     return data
 
