@@ -49,7 +49,7 @@ class App:
             1. Legge til nye kategorier - #DONE
             2. Skrive ut mer av eksisterende
                 Skrive ut av ting. 
-                
+
             Vis alle kategorier  - CHECK
             Vise utvalg av kategorier - CHECK.
             Vise alle items - Check
@@ -80,16 +80,18 @@ class App:
         self.gui.setup_controls()
         if request == "show_all_cats":
             data = fetch_all_categories()
-            self.gui.display_table(data)
+            self.gui.display_single_table(data)
         elif request == "show_storages":
             data = fetch_all_items()
             # self.gui.set_menu(self.gui.update_table_text)
-            self.gui.display_table(data)
+            self.gui.display_single_table(data)
         elif request == "show_prints":
-            data = fetch_all_new()
+            new = fetch_all_new()
+            selected = ["TEST"]
+            self.gui.display_prints(new,selected)
             # self.gui.set_menu(self.gui.update_table_text)
 
-            self.gui.display_prints(data)
+
         elif request == "add_cats":
             self.changed = []
             self.gui.display_add_cats()
@@ -213,11 +215,16 @@ class Gui(tk.Tk):
         for i, j in enumerate(self.data[0]):
             if j.lower() == "storage":
                 self.room_index = i
-
-    def display_table(self, data: list):
-        """Vis tekst i visningsområdet"""
+                return
+        else:
+            self.room_index = None
+    def display_single_table(self, data:list[str]):
         self.clear_display()
         self.set_menu(self.update_table_text)
+        self.display_table(data, self.display_frame)
+
+    def display_table(self, data: list[str], frame:tk.Frame):
+        """Vis tekst i visningsområdet"""
         self.vals = [0] * len(data[0])
         self.data = data
         self.set_room_index()
@@ -228,7 +235,7 @@ class Gui(tk.Tk):
                 self.vals[i] = max(self.vals[i], len(str(info)),1)
 
         # Tekstfelt
-        output = tk.Text(self.display_frame, wrap="none")
+        output = tk.Text(frame, wrap="none")
         output.pack(padx=10, pady=10, fill="both", expand=True)
         # Rullefelt
         scroll = ttk.Scrollbar(output, orient="vertical", command=output.yview)
@@ -271,7 +278,7 @@ class Gui(tk.Tk):
             text += f"{info:<{self.vals[i]}} "
         text += "\n"
         # If rooms filter
-        if self.room_index:
+        if self.room_index != None:
             for row in self.data[1:]:
                 room: str = row[self.room_index]
 
@@ -415,8 +422,28 @@ class Gui(tk.Tk):
 
         
       
-    def display_prints(self, new_prints) -> None:
-        self.set_menu(self.update_table_text)
+    def display_prints(self, new_prints, selected) -> None:
+        self.clear_display()
+        self.clear_menu()
+        # IDEA: Menu show color
+        # # And show storage colors
+        # How to make selected possible ... 
+        # App needs two attributes, slc_item, slc_cats
+        # Need to update display_table alot, so that all have a checkbox to select or not, also able to preselect some/all/none.
+        # Display print needs to remove from selected. And give option to clear. 
+        new_frame = tk.Frame(self.display_frame,relief="raised",)
+        selected_frame = tk.Frame(self.display_frame,relief="raised")
+
+        tk.Label(self.display_frame, text="New ").pack(anchor="w")
+        new_frame.pack(fill="both",expand=True)
+        tk.Label(self.display_frame, text="Selected").pack(anchor="w")
+        selected_frame.pack(fill="both",expand=True)
+        # self.set_menu(self.update_table_text)
+        tk.Label(self.display_frame, text=f"Total items to print {len(new_prints)+len(selected)}").pack(anchor="w")
+
+        self.display_table(new_prints, new_frame)
+        self.display_table(selected,selected_frame)
+
         # Samt muligheter for å velge egne data til utskrift.
         # Enten fra å velge fra de andre fanene 1-2, eller i denne?
 
@@ -429,10 +456,17 @@ class Gui(tk.Tk):
         pass
 
     def set_menu(
+            
         self,
         onclick,
         inital_val=True,
     ):
+        """ Controls menu behavior
+
+        Args:
+            onclick (Functoin): What funtion the menu should call
+            inital_val (bool, optional): Defaults to True.
+        """
         if self.meny_frame.winfo_children():
             return
         # Menyfelt
