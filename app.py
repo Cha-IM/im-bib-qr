@@ -2,10 +2,8 @@
 from inventory_service import (
     print_all_new,
     create_new_categories_from_csv,
-    add_to_category,
     show_all_items,
     show_all_new,
-    create_new_category_with_items,
     show_all_categories,
 )
 from inventory_service import (
@@ -13,6 +11,9 @@ from inventory_service import (
     fetch_all_categories,
     fetch_all_storages,
     fetch_all_items,
+    is_existing_category,
+    create_new_category_with_items,
+    add_to_category,
 )
 import tkinter as tk
 from tkinter import ttk
@@ -43,7 +44,12 @@ class App:
 
     def handle_request(self, request):
         """Behandle forespørselen og be gui om å vise resultatet"""
-        """ hvordan sortere? 
+        """ hvordan sortere? ¨
+        Prioritering --> 
+            1. Legge til nye kategorier - #DONE
+            2. Skrive ut mer av eksisterende
+                Skrive ut av ting. 
+                
             Vis alle kategorier  - CHECK
             Vise utvalg av kategorier - CHECK.
             Vise alle items - Check
@@ -92,6 +98,25 @@ class App:
         """Start hendelsessløyfen og hold vinduet åpent"""
         self.gui.mainloop()
 
+    def add_to_db(self,prefix,name,storage,count):
+        if not prefix:
+            raise ValueError("Prefix can't be empty")
+        
+        # Verifisering av innhold. 
+        # 1 unikt
+        if is_existing_category(prefix):
+            add_to_category(prefix,count)
+            return f"Adding {count} to exsisting category CHA{prefix} \n name and storage is ignored"
+        else:
+            if not name:
+                raise ValueError("Name can't be empty")
+            if not storage:
+                raise ValueError("Storage can't be empty")
+            
+
+            create_new_category_with_items(name,prefix,storage,count)
+            return f"Successfully added {count} to the database \n CHA{prefix} \n {name} to {storage}"
+
 
 class Gui(tk.Tk):
     def __init__(self, app):
@@ -122,7 +147,7 @@ class Gui(tk.Tk):
             "Vis \n kategorier": self.show_cats_request,
             "\n Vis ting": self.show_rooms_request,
             "\n Utskrift ": self.show_prints_request,
-            "Legg til \n nye kategorier": self.add_cats_request,
+            "\n Legg til ": self.add_cats_request,
             "Fjern\n innhold": lambda: print("Not implemented"),
         }
         self.current = None
@@ -200,7 +225,7 @@ class Gui(tk.Tk):
         # Find len of rows:
         for row in data:
             for i, info in enumerate(row):
-                self.vals[i] = max(self.vals[i], len(str(info)))
+                self.vals[i] = max(self.vals[i], len(str(info)),1)
 
         # Tekstfelt
         output = tk.Text(self.display_frame, wrap="none")
@@ -249,11 +274,12 @@ class Gui(tk.Tk):
         if self.room_index:
             for row in self.data[1:]:
                 room: str = row[self.room_index]
+
                 if self.meny_vals[room].get():
                     for i, info in enumerate(row):
                         text += f"{info:<{self.vals[i]}} "
                     text += "\n"
-
+        
         else:
             # Prepp text
             text = ""
@@ -279,7 +305,7 @@ class Gui(tk.Tk):
         nameVar = tk.StringVar()
         storageVar = tk.StringVar()
         numbVar = tk.IntVar()
-        
+
         col_1 = []
         col_2 = []
         prefix_text = tk.Label(self.display_frame, text="Prefix")
@@ -305,6 +331,7 @@ class Gui(tk.Tk):
             
         )
 
+        
         storages = fetch_all_storages()
         for storage in storages:
             storage_input.insert("end", storage)
@@ -339,29 +366,53 @@ class Gui(tk.Tk):
         for i, item in enumerate(col_2):
             item.grid(row=i, column=1, pady=10)
         i = len(col_1)
+        err = tk.StringVar()
+        feedback_label = tk.Label(self.display_frame,textvariable=err, fg="red")
+        feedback_label.grid(row=i,column=0,columnspan=2)
+        
+        
+        def add_cat():
+            
+            try:
+                prefix  = prefixVar.get().strip().upper()
+                name    = nameVar.get().strip().capitalize()
+                storage = storageVar.get().strip()
+                count  = numbVar.get()
+                res = app.add_to_db(
+                    prefix,
+                    name,
+                    storage,
+                    count
+                )
+                err.set(res)  #HACK should have a unified prefix method, and unified way to display Repeating Skriv ut. 
+            except ValueError as e:
+                err.set(str(e))
+
 
         self.display_frame.columnconfigure(3,weight=3)
-        make_button = tk.Button(self.display_frame, text="")
+        make_button = tk.Button(self.display_frame, text="", command=add_cat)
         make_button.grid(row=0, column=3, rowspan=i, pady=10, padx=10, sticky="NSEW")
 
-        def skriv_ut(*args):
+        def btn_text(*args):
 
             prefix  = prefixVar.get().strip().upper()
             name    = nameVar.get().strip().capitalize()
             storage = storageVar.get().strip()
-            number  = str(numbVar.get()).strip()
+            number  = numbVar.get()
 
-            txt = "Trykk for å lage følgende:"
+            txt = "Trykk for å lage følgende: \n"
             if prefix:  txt += f"\n CHA{prefix}"
             if number:  txt += f" {number}"
             if storage: txt += f"\n{storage}"
             if name:    txt += f"\n{name}"
             make_button.config(text=txt)
-
-        skriv_ut([])
+            
+        btn_text([])
         vars = [prefixVar, nameVar, storageVar, numbVar]
         for var in vars:
-            var.trace_add("write", skriv_ut)
+            var.trace_add("write", btn_text)
+        
+
         
       
     def display_prints(self, new_prints) -> None:

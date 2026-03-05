@@ -252,10 +252,11 @@ class DB:
     def _add_items(self, category_id:int, start:int, count:int, prefix:str)-> None:
         """ Adds count items to an existing category from itemcode = prefix+start """
         items = []
+        time = now()
         for number in range(start, count + start):
-            items.append([category_id, number, self.compute_item_code(prefix, number)])
+            items.append([category_id, number, self.compute_item_code(prefix, number),time])
         self.cursor.executemany(
-            "INSERT INTO items (category_id, number, item_code) VALUES (?, ?, ?)", items
+            "INSERT INTO items (category_id, number, item_code,qr_print_at) VALUES (?, ?, ?,?)", items
         )
        
         self.logs.add("Added","Added the following to the DB", [category_id, start, count, prefix])

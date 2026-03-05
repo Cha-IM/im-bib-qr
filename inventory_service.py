@@ -147,6 +147,19 @@ def fetch_all_items():
         data = [a,*db.fetch_items()]
     return data
 
+def is_existing_category(prefix:str)->bool:
+    """ Do not care about storage:str,name:str, only checks prefix"""
+    prefix=prefix.upper()
+    if not prefix.startswith("CHA"):
+        prefix = "CHA"+prefix
+    with DB() as db:
+        data=db.fetch_categories_prefixes()
+    print(data)
+    print(prefix)
+    return prefix in data
+
+
+
 def show_all_categories():
     data = fetch_all_categories()
     
