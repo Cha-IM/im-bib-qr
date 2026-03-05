@@ -13,7 +13,7 @@ HEADERS = ["Prefix", "Name", "Storage", "Number"]
 
 def create_new_category_with_items(name: str, prefix: str, storage: str, count: int):
         name = name.strip().capitalize()
-        prefix =prefix.strip().upper()
+        prefix = validate_prefix(prefix)
         storage = storage.strip().capitalize()
         count = int(count)
         if count < 1:
@@ -24,7 +24,12 @@ def create_new_category_with_items(name: str, prefix: str, storage: str, count: 
                 db._add_items(category_id, 1, count, prefix)
             except IntegrityError as e:
                 db.logs.add("Error", str(e), (name,prefix, storage, count)) 
-                
+
+def validate_prefix(prefix:str)->str:
+    prefix =prefix.strip().upper()
+    if not prefix.startswith("CHA"):
+        return "CHA"+prefix
+    return prefix                
             
 def add_to_category(prefix:str, count:int):
     prefix =prefix.strip().upper()

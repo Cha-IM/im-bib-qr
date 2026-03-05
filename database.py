@@ -158,8 +158,7 @@ class DB:
     def add_category(self, name: str, prefix: str, storage_room_name: str):
         self.validate_storage(storage_room_name)
         storage_room_id = self.STORAGE.get(storage_room_name)
-        if not prefix.startswith("CHA"):
-            prefix = "CHA"+prefix
+        
         try:
             self.cursor.execute(
                 "INSERT INTO categories (name, prefix, storage_room_id) VALUES (?, ?, ?)",
