@@ -82,16 +82,20 @@ class App:
         self.gui.setup_controls()
         if request == "show_all_cats":
             data = fetch_all_categories()
+            self.gui.clear_display()
+            self.gui.set_menu(self.gui.update_table_text)
             self.gui.display_single_table(data)
         elif request == "show_storages":
-            data = fetch_all_items()
-            # self.gui.set_menu(self.gui.update_table_text)
+            # data = fetch_all_items()
+            self.gui.clear_display()
+            data = fetch_all_categories()
+            self.gui.set_menu(self.gui.update_table_text, inital_val=False)
             self.gui.display_single_table(data)
         elif request == "show_prints":
             new = fetch_all_new()
             selected = ["TEST"]
             self.gui.display_prints(new,selected)
-            # self.gui.set_menu(self.gui.update_table_text)
+            
 
 
         elif request == "add_cats":
@@ -156,6 +160,7 @@ class Gui(tk.Tk):
         }
         self.current = None
 
+        self.rooms = fetch_all_storages()
         # Visnngsområde
         self.display_frame = tk.Frame(self)
         self.display_frame.pack(side=tk.RIGHT, fill="both", expand=True)
@@ -222,7 +227,7 @@ class Gui(tk.Tk):
             self.room_index = None
     def display_single_table(self, data:list[str]):
         self.clear_display()
-        self.set_menu(self.update_table_text)
+        
         self.display_table(data, self.display_frame)
 
     def display_table(self, data: list[str], frame:tk.Frame):
@@ -236,80 +241,55 @@ class Gui(tk.Tk):
             for i, info in enumerate(row):
                 self.vals[i] = max(self.vals[i], len(str(info)),1)
 
-        # Tekstfelt
-        output = tk.Text(frame, wrap="none")
-        output.pack(padx=10, pady=10, fill="both", expand=True)
-        # Rullefelt
-        scroll = ttk.Scrollbar(output, orient="vertical", command=output.yview)
-        scroll.pack(side="right", fill="y")
-        output["yscrollcommand"] = scroll.set
-        # Tag for marger
-        output.tag_configure("marg", lmargin1=10, lmargin2=10, rmargin=10)
-        # Tag for fet skrift
-        font = Font(output, output.cget("font"))
-        font.config(weight="bold")
-        output.tag_configure("fet", font=font)
+        
+        container = tk.Frame(frame)
+        container.pack(fill=tk.BOTH, expand=True)
 
-        output.configure(cursor="arrow", takefocus=0, exportselection=False)
-        for seq in (
-            "<Key>",
-            "<<Paste>>",
-            "<<Cut>>",
-            "<Control-v>",
-            "<Control-x>",
-            "<Control-Shift-V>",
-        ):
-            output.bind(seq, lambda e: "break")
-        for seq in (
-            "<Button-1>",
-            "<B1-Motion>",
-            "<Shift-Button-1>",
-            "<Double-Button-1>",
-            "<Triple-Button-1>",
-            "<Control-a>",
-        ):
-            output.bind(seq, lambda e: "break")
-        self.output = output
+        
+        canvas = tk.Canvas(container)
+        scrollbar = ttk.Scrollbar(container, orient="vertical", command=canvas.yview)
+        scrollable_frame = ttk.Frame(canvas)
 
+       
+        scrollable_frame.bind(
+            "<Configure>",
+            lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+        )
+
+        canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+        canvas.configure(yscrollcommand=scrollbar.set)
+
+        canvas.pack(side="left", fill="both", expand=True)
+        scrollbar.pack(side="right", fill="y")
+
+       
+        self.output=tk.Frame(scrollable_frame)
+        self.output.pack()
+        self.data = data
+        self.header = data.pop(0)
         self.update_table_text()
 
     def update_table_text(self):
-        text = ""
-        # Header
-        for i, info in enumerate(self.data[0]):
-            text += f"{info:<{self.vals[i]}} "
-        text += "\n"
-        # If rooms filter
-        if self.room_index != None:
-            for row in self.data[1:]:
-                room: str = row[self.room_index]
-
-                if self.meny_vals[room].get():
-                    for i, info in enumerate(row):
-                        text += f"{info:<{self.vals[i]}} "
-                    text += "\n"
+        self.clear_frame(self.output)
         
+        for j, item in enumerate(self.header):
+            tk.Label(self.output, text=item,anchor="w", relief="raised").grid(row=0, column=j, sticky="WE")
+        if self.room_index != None:
+            for i, row in enumerate(self.data,start=1):
+                room: str = row[self.room_index]
+                if self.meny_vals[room].get():
+                    for j, item in enumerate(row):
+                        tk.Label(self.output, text=item,anchor="w").grid(row=i, column=j, sticky="WE")
         else:
-            # Prepp text
-            text = ""
-            for row in self.data:
-                for i, info in enumerate(row):
-                    text += f"{info:<{self.vals[i]}} "
-                text += "\n"
+            for i, row in enumerate(self.data,start=1):
+                for j, item in enumerate(row):
+                    tk.Label(self.output, text=item,anchor="w").grid(row=i, column=j, )
 
-        self.output.delete("1.0", tk.END)
-        self.output.insert("1.0", text, "marg")
-        self.output.tag_add("fet", "1.0", "1.end")
 
     def display_add_cats(self) -> None:
         self.clear_display()
         self.clear_menu()
-        # Hva trengs her:
-        # Prefix;Name;Storage;Number
-        # Prefix er ok. --> Sjekk at ikke starter på CHA
-        # Navn er ok
-        # Storage velges fra eksisterende
-        # Number >= 1
+       
         prefixVar = tk.StringVar()
         nameVar = tk.StringVar()
         storageVar = tk.StringVar()
@@ -434,14 +414,14 @@ class Gui(tk.Tk):
         # App needs two attributes, slc_item, slc_cats
         # Need to update display_table alot, so that all have a checkbox to select or not, also able to preselect some/all/none.
         # Display print needs to remove from selected. And give option to clear. 
-        new_frame = tk.Frame(self.display_frame,relief="raised",)
-        selected_frame = tk.Frame(self.display_frame,relief="raised")
+        new_frame = tk.Frame(self.display_frame, relief="raised", border=2, borderwidth=2)
+        selected_frame = tk.Frame(self.display_frame, relief="raised", border=2, borderwidth=2)
 
         tk.Label(self.display_frame, text="New ").pack(anchor="w")
         new_frame.pack(fill="both",expand=True)
         tk.Label(self.display_frame, text="Selected").pack(anchor="w")
         selected_frame.pack(fill="both",expand=True)
-        # self.set_menu(self.update_table_text)
+        
         tk.Label(self.meny_frame, text=f"Total items\nto print:{len(new_prints)-1+len(selected)}\n one page: {MAX_PAGE_QR}").pack()
         
 
@@ -472,26 +452,24 @@ class Gui(tk.Tk):
             onclick (Functoin): What funtion the menu should call
             inital_val (bool, optional): Defaults to True.
         """
-        if self.meny_frame.winfo_children():
-            return
+        self.clear_menu()
         # Menyfelt
-        rooms = fetch_all_storages()
-        for i, storage in enumerate(rooms):
+        
+        for i, storage in enumerate(self.rooms):
             self.meny_vals[storage] = tk.BooleanVar()
-            # self.meny_vals[storage].set(inital_val)
+            self.meny_vals[storage].set(inital_val)
 
             btn = tk.Checkbutton(
                 self.meny_frame,
                 text=storage,
-                onvalue=True,
-                offvalue=False,
                 variable=self.meny_vals[storage],
                 command=onclick,
             )
 
-            if inital_val:
-                btn.select()
-
+            # if inital_val:
+            #     btn.select()
+            
+                
             btn.grid(row=i, column=0, sticky="w")
 
     def clear_menu(self) -> None:
@@ -500,8 +478,12 @@ class Gui(tk.Tk):
 
     def clear_display(self) -> None:
         """Fjern alle widgeter fra visningsområdet (før ny visning)"""
-        for widget in self.display_frame.winfo_children():
+        self.clear_frame(self.display_frame)
+        
+    def clear_frame(self,frame)->None:
+        for widget in frame.winfo_children():
             widget.destroy()
+
 
     def destroy(self) -> None:
         """
