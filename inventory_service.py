@@ -105,26 +105,37 @@ def print_all_new():
     """
     with DB() as db:
         to_print = db.fetch_not_printed()
-        if not to_print:
-            return False
-        items_list = []
-        id_list = []
-        for id, prefix,fg,bg in to_print:
-            items_list.append({"prefix":prefix, "fg":fg, "bg":bg})
-            id_list.append(id)
+    if not to_print:
+        return False
+    else:
+        print_items(to_print)
+   
 
-        # Fill-check
-        if (len(id_list) % MAX_PAGE_QR)/MAX_PAGE_QR < PAGE_PRINT_TRESHOLD: 
-            excess = len(id_list) % MAX_PAGE_QR
-            id_list = id_list[:len(id_list)-excess] #Hopper over de n - første elementene.
-            items_list = items_list[:len(id_list)-excess]
+def print_items(to_print:list[str]):
+    # Items need: 
+    # ID
+    # Prefix
+    # FG
+    # BG
 
-        
-        qr_pdf_generator(items_list, name="new")
+    items_list = []
+    id_list = []
+    for id, prefix,fg,bg in to_print:
+        items_list.append({"prefix":prefix, "fg":fg, "bg":bg})
+        id_list.append(id)
+
+    # Fill-check
+    if (len(id_list) % MAX_PAGE_QR)/MAX_PAGE_QR < PAGE_PRINT_TRESHOLD: 
+        excess = len(id_list) % MAX_PAGE_QR
+        id_list = id_list[:len(id_list)-excess] #Hopper over de n - første elementene.
+        items_list = items_list[:len(id_list)-excess]
+
+    
+    qr_pdf_generator(items_list, name="new")
+    with DB() as db:
         db.mark_multiple_qr_printed(id_list)
         return True
-
-
+    
 def add_storage(name:str, fg:str, bg:str):
     try:
         with DB() as db:

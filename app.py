@@ -14,6 +14,7 @@ from inventory_service import (
     is_existing_category,
     create_new_category_with_items,
     add_to_category,
+    print_items
 )
 import tkinter as tk
 from tkinter import ttk
@@ -439,8 +440,8 @@ class Gui(tk.Tk):
         tk.Label(self.display_frame, text="Selected").pack(anchor="w")
         selected_frame.pack(fill="both",expand=True)
         # self.set_menu(self.update_table_text)
-        tk.Label(self.display_frame, text=f"Total items to print {len(new_prints)+len(selected)}").pack(anchor="w")
-
+        tk.Label(self.meny_frame, text=f"Total items to \n print {len(new_prints)+len(selected)}").pack()
+        tk.Button(self.meny_frame, text="Print", command=lambda:print_items(new_prints)).pack()
         self.display_table(new_prints, new_frame)
         self.display_table(selected,selected_frame)
 
@@ -453,7 +454,7 @@ class Gui(tk.Tk):
         # 3 Widget med alle valgte kategorier for prints
         # 4 Widget med alle valgte items for prints
 
-        pass
+        
 
     def set_menu(
             
