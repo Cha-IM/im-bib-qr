@@ -214,13 +214,14 @@ def demo():
     # add_storages()
     # create_new_categories_from_csv("test_2")
     # show_all_categories()
-    show_all_items()
     # if print_all_new():
     #     print("All new QR's printed")
     # else:
     #     print("No new QR's to print")
     # show_all_items()
-
+    # remove_items_from_cat("CHADPORT",list(range(1,38)))
+    # remove_items_from_cat("CHAHDMIIM",list(range(1,81)))
+    show_all_items()
 
 
 if __name__ == "__main__":

@@ -16,6 +16,7 @@ from inventory_service import (
     add_to_category,
     print_items
 )
+from QR_writing import MAX_PAGE_QR
 import tkinter as tk
 from tkinter import ttk
 from tkinter.font import Font
@@ -426,6 +427,7 @@ class Gui(tk.Tk):
     def display_prints(self, new_prints, selected) -> None:
         self.clear_display()
         self.clear_menu()
+        
         # IDEA: Menu show color
         # # And show storage colors
         # How to make selected possible ... 
@@ -440,8 +442,10 @@ class Gui(tk.Tk):
         tk.Label(self.display_frame, text="Selected").pack(anchor="w")
         selected_frame.pack(fill="both",expand=True)
         # self.set_menu(self.update_table_text)
-        tk.Label(self.meny_frame, text=f"Total items to \n print {len(new_prints)+len(selected)}").pack()
-        tk.Button(self.meny_frame, text="Print", command=lambda:print_items(new_prints)).pack()
+        tk.Label(self.meny_frame, text=f"Total items\nto print:{len(new_prints)-1+len(selected)}\n one page: {MAX_PAGE_QR}").pack()
+        
+
+        tk.Button(self.meny_frame, text="Print", command=lambda:print(new_prints[1:])).pack()
         self.display_table(new_prints, new_frame)
         self.display_table(selected,selected_frame)
 
