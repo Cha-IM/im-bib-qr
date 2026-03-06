@@ -445,7 +445,7 @@ class Gui(tk.Tk):
         tk.Label(self.meny_frame, text=f"Total items\nto print:{len(new_prints)-1+len(selected)}\n one page: {MAX_PAGE_QR}").pack()
         
 
-        tk.Button(self.meny_frame, text="Print", command=lambda:print(new_prints[1:])).pack()
+        tk.Button(self.meny_frame, text="Print", command=lambda:print_items(new_prints[1:])).pack()
         self.display_table(new_prints, new_frame)
         self.display_table(selected,selected_frame)
 
