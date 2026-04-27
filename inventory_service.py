@@ -212,7 +212,7 @@ def demo():
  
     
     # add_storages()
-    # create_new_categories_from_csv("test_2")
+    create_new_categories_from_csv("input_7.csv")
     # show_all_categories()
     # if print_all_new():
     #     print("All new QR's printed")
@@ -221,6 +221,8 @@ def demo():
     # show_all_items()
     # remove_items_from_cat("CHADPORT",list(range(1,38)))
     # remove_items_from_cat("CHAHDMIIM",list(range(1,81)))
+    remove_items_from_cat("CHAHDMIL",[1,2])
+
     show_all_items()
 
 
