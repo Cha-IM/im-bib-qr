@@ -3340,3 +3340,482 @@ Added the following to the DB
 2026-04-27T18-41 - No logs 
 2026-04-27T18-41 - No logs 
 2026-04-27T18-41 - No logs 
+2026-05-20T08-22
+**********Added********** 
+Added the following to the DB 
+[108, 1, 40, 'CHAKA']
+
+2026-05-20T08-22
+**********Added********** 
+Added the following to the DB 
+[109, 1, 44, 'CHABAT']
+
+2026-05-20T08-22
+**********Added********** 
+Added the following to the DB 
+[110, 1, 57, 'CHAOBJ']
+
+2026-05-20T08-22
+**********Added********** 
+Added the following to the DB 
+[111, 1, 34, 'CHALAD']
+
+2026-05-20T08-22 - No logs 
+2026-05-20T08-22 - No logs 
+2026-05-20T08-23 - No logs 
+2026-05-20T08-23 - No logs 
+2026-05-20T08-26
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Røde mygg', 'CHARØDMG', 'Videolager', 1)
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[112, 1, 1, 'CHAMFNT2']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[113, 1, 1, 'CHAMFNT3']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[114, 1, 2, 'CHAMFRC']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[115, 1, 1, 'CHAMFRL']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[116, 1, 1, 'CHAMFGO2']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[117, 1, 1, 'CHAMFSK100']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[118, 1, 3, 'CHAMF']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[119, 1, 1, 'CHAMFRUC']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[120, 1, 4, 'CHAMFQ1']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[121, 1, 3, 'CHAMFBOOM']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[122, 1, 3, 'CHAMFZEP']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[123, 1, 1, 'CHAAMON']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[124, 1, 3, 'CHALYALP']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[125, 1, 4, 'CHALYALPL']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[126, 1, 2, 'CHALYAB']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[127, 1, 8, 'CHALYM150']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[128, 1, 1, 'CHAXLRTRML']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[129, 1, 1, 'CHAXLR7.5M']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[130, 1, 5, 'CHAXLR6M']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[131, 1, 1, 'CHAXLR5M']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[132, 1, 11, 'CHAXLR3M']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[133, 1, 4, 'CHAXLR2M']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[134, 1, 12, 'CHAXLR1M']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[135, 1, 1, 'CHAXLRFM']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[136, 1, 3, 'CHAXLRMM']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[137, 1, 2, 'CHAXLRMAU']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[138, 1, 1, 'CHA2XLRMAU']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[139, 1, 12, 'CHAXLRFAU']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[140, 1, 7, 'CHAVBAG']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[141, 1, 21, 'CHAWITB']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[142, 1, 2, 'CHAMKSRB']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[143, 1, 10, 'CHAVSDL']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[144, 1, 4, 'CHAUSBLAD']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[145, 1, 1, 'CHAVUSBAB']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[146, 1, 3, 'CHAPREAMP']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[147, 1, 2, 'CHACAMS']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[148, 1, 1, 'CHAJIB']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[149, 1, 9, 'CHAMTP']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[150, 1, 2, 'CHASSR']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[151, 1, 11, 'CHALTP']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[152, 1, 4, 'CHALMTPM']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[153, 1, 3, 'CHAMTPU']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[154, 1, 5, 'CHAMKHS']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[155, 1, 26, 'CHAMKMUS']
+
+2026-05-20T08-26
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Canon objektiv tamron 90mm f2.8', 'CHACOBJ', 'Spesialager', 4)
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[156, 1, 2, 'CHA60DEOS']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[157, 1, 1, 'CHAERMM']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[158, 1, 9, 'CHASBAG']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[159, 1, 1, 'CHAGBM']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[160, 1, 2, 'CHAMXCC']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[161, 1, 1, 'CHA360P2']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[162, 1, 1, 'CHALO3D']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[163, 1, 1, 'CHALK4I4']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[164, 1, 1, 'CHALK8I6']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[165, 1, 1, 'CHALKZOO']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[166, 1, 1, 'CHALK18I8']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[167, 1, 1, 'CHAHDMIS']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[168, 1, 3, 'CHAMKSR']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[169, 1, 1, 'CHACOBFC']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[170, 1, 1, 'CHAGBW']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[171, 1, 2, 'CHA5DJID']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[172, 1, 1, 'CHA4DJID']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[173, 1, 1, 'CHAGP7KIT']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[174, 1, 1, 'CHAGP7TLAP']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[175, 1, 1, 'CHAGP7VS']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[176, 1, 1, 'CHAGP7STRHD']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[177, 1, 1, 'CHAGP7STRB']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[178, 1, 1, 'CHAGP7STRHL']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[179, 1, 1, 'CHAGP7HS']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[180, 1, 1, 'CHAGP7HSFO']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[181, 1, 1, 'CHAGP7MINTRI']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[182, 1, 3, 'CHAOGCA']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[183, 1, 1, 'CHAOGLA']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[184, 1, 6, 'CHANFLG']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[185, 1, 2, 'CHALOH4']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[186, 1, 3, 'CHALOH1']
+
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[187, 1, 4, 'CHALO60D']
+
+2026-05-20T08-26
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Vater', 'CHAVAT', 'Verksted', 2)
+
+2026-05-20T08-26
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Voxicon dk-295b', 'CHATASTX', 'Verksted', 3)
+
+2026-05-20T08-26
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Lenovi thinkvision e27q40', 'CHALENPS', 'Verksted', 1)
+
+2026-05-20T08-26
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Samsung u32r590cvr', 'CHASAM3PS', 'Verksted', 1)
+
+2026-05-20T08-26
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Voxicon vxd g34uhdw', 'CHAVOXPS', 'Verksted', 1)
+
+2026-05-20T08-26 - No logs 
+2026-05-20T08-26 - No logs 
+2026-05-20T08-26 - No logs 
+2026-05-20T08-26 - No logs 
+2026-05-20T08-26 - No logs 
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[108, 41, 1, 'CHAKA']
+
+2026-05-20T08-26 - No logs 
+2026-05-20T08-26
+**********Added********** 
+Added the following to the DB 
+[109, 45, 2, 'CHABAT']
+
+2026-05-20T08-27 - No logs 
+2026-05-20T08-27
+**********Added********** 
+Added the following to the DB 
+[1, 32, 2, 'CHABAG']
+
+2026-05-20T08-27 - No logs 
+2026-05-20T08-27
+**********Added********** 
+Added the following to the DB 
+[4, 21, 2, 'CHASDL']
+
+2026-05-20T08-27 - No logs 
+2026-05-20T08-27
+**********Added********** 
+Added the following to the DB 
+[104, 11, 3, 'CHABATLP']
+
+2026-05-20T08-27 - No logs 
+2026-05-20T08-27
+**********Added********** 
+Added the following to the DB 
+[105, 9, 1, 'CHACOBJ']
+

@@ -63,9 +63,9 @@ def create_new_categories_from_csv(filename: str, add_new_storages=False):
         If storage is not in the database a new storage room will be added for the category.
 
     """
-    inn_path = check_path(filename)
+    inn_path = check_path("inputs/"+filename)
     with open(inn_path, encoding="UTF-8-sig") as f:
-        reader = csv.DictReader(f)
+        reader = csv.DictReader(f,delimiter=";")
 
         data = [row for row in reader]
         expexted = [x.lower().strip() for x in HEADERS]
@@ -212,7 +212,7 @@ def demo():
  
     
     # add_storages()
-    create_new_categories_from_csv("input_7.csv")
+    
     # show_all_categories()
     # if print_all_new():
     #     print("All new QR's printed")
@@ -221,12 +221,19 @@ def demo():
     # show_all_items()
     # remove_items_from_cat("CHADPORT",list(range(1,38)))
     # remove_items_from_cat("CHAHDMIIM",list(range(1,81)))
-    remove_items_from_cat("CHAHDMIL",[1,2])
+    # remove_items_from_cat("CHAHDMIL",[1,2])
 
     show_all_items()
 
 
 if __name__ == "__main__":
-    demo()
+    # demo()
     # add_storages()
-    
+
+    create_new_categories_from_csv("input_8.csv")
+    # create_new_category_with_items("Kamera","KA","Fotolager",40)
+    # create_new_category_with_items("KameraBatteri","BAT","Fotolager",44)
+    # create_new_category_with_items("Objektiv","OBJ","Fotolager",57)
+    # create_new_category_with_items("Kameralader","LAD","Fotolager",34)
+    # print_all_new()
+    pass
