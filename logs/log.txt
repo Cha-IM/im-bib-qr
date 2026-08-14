@@ -3819,3 +3819,501 @@ Added the following to the DB
 Added the following to the DB 
 [105, 9, 1, 'CHACOBJ']
 
+2026-05-20T08-30 - No logs 
+2026-05-20T08-30
+**********Added********** 
+Added the following to the DB 
+[13, 19, 1, 'CHAVIB']
+
+2026-05-20T08-30 - No logs 
+2026-05-20T08-30
+**********Added********** 
+Added the following to the DB 
+[88, 8, 2, 'CHANF53']
+
+2026-05-20T08-30 - No logs 
+2026-05-20T08-30
+**********Added********** 
+Added the following to the DB 
+[91, 4, 2, 'CHALOT']
+
+2026-05-20T08-31 - No logs 
+2026-05-20T08-31
+**********Added********** 
+Added the following to the DB 
+[93, 2, 1, 'CHADJIMG']
+
+2026-05-20T08-31 - No logs 
+2026-05-20T08-32 - No logs 
+2026-05-20T08-32 - No logs 
+2026-05-20T08-32
+**********Added********** 
+Added the following to the DB 
+[77, 26, 5, 'CHATVEL']
+
+2026-05-20T08-33 - No logs 
+2026-05-20T08-57 - No logs 
+2026-05-20T11-36 - No logs 
+2026-05-20T11-36 - No logs 
+2026-05-20T11-36 - No logs 
+2026-05-20T11-40 - No logs 
+2026-05-20T11-40 - No logs 
+2026-05-20T11-40 - No logs 
+2026-05-20T11-40 - No logs 
+2026-05-20T11-41 - No logs 
+2026-05-20T11-41 - No logs 
+2026-05-20T11-41
+**********Added********** 
+Added the following to the DB 
+[86, 14, 1, 'CHAVTP']
+
+2026-05-20T11-42 - No logs 
+2026-05-20T11-42
+**********Added********** 
+Added the following to the DB 
+[25, 9, 2, 'CHAUSBAC']
+
+2026-05-20T11-42 - No logs 
+2026-05-20T11-42
+**********Added********** 
+Added the following to the DB 
+[40, 15, 1, 'CHAT2TT']
+
+2026-05-20T11-42 - No logs 
+2026-05-20T11-42 - No logs 
+2026-05-20T11-42
+**********Added********** 
+Added the following to the DB 
+[56, 27, 2, 'CHASPCAMD']
+
+2026-05-20T11-43 - No logs 
+2026-05-20T11-43
+**********Added********** 
+Added the following to the DB 
+[61, 7, 6, 'CHAT3TT']
+
+2026-05-20T11-44 - No logs 
+2026-05-20T11-44 - No logs 
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Røde mygg', 'CHARØDMG', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Røde nt2 mic', 'CHAMFNT2', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Røde nt3 mic', 'CHAMFNT3', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Røde video-mic me usb-c / 3.5mm', 'CHAMFRC', 'Videolager', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Røde video-mic me lightning / 3.5mm', 'CHAMFRL', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Røde go ii - mygg', 'CHAMFGO2', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Sennheiser sk100 - mygg', 'CHAMFSK100', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Irig mic cast (mic med aux)', 'CHAMF', 'Videolager', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Røde usb-b mic', 'CHAMFRUC', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Sairen q1 mic med usb-c', 'CHAMFQ1', 'Videolager', 4)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Boom staver', 'CHAMFBOOM', 'Videolager', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Boom + zepelin', 'CHAMFZEP', 'Videolager', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Aputure mini-monitor - vs-2 fine hd', 'CHAAMON', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Aputure amaran led-panel', 'CHALYALP', 'Videolager', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Apature amaran led-panel lader', 'CHALYALPL', 'Videolager', 4)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Apature led-panel bag', 'CHALYAB', 'Videolager', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Led m150 lys', 'CHALYM150', 'Videolager', 8)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr trommel x meter', 'CHAXLRTRML', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr 7,5m', 'CHAXLR7.5M', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr 6m', 'CHAXLR6M', 'Videolager', 5)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr 5m', 'CHAXLR5M', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr 3m', 'CHAXLR3M', 'Videolager', 11)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr 2m', 'CHAXLR2M', 'Videolager', 4)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr 1m', 'CHAXLR1M', 'Videolager', 12)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr f til jack m', 'CHAXLRFM', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr m til jack m', 'CHAXLRMM', 'Videolager', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr m til 3.5mm f', 'CHAXLRMAU', 'Videolager', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('2xlr m til 3.5mm m 2m', 'CHA2XLRMAU', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Xlr f til 3.5 mm m', 'CHAXLRFAU', 'Videolager', 12)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Bagger - videolager', 'CHAVBAG', 'Videolager', 7)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Wacom intuos tegnebrett', 'CHAWITB', 'Videolager', 21)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mobil-kit smallrig bag', 'CHAMKSRB', 'Videolager', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Sandberg 3-1 sd-kortleser', 'CHAVSDL', 'Videolager', 10)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb-lader 4 porter.', 'CHAUSBLAD', 'Videolager', 4)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb-b m til usb-a', 'CHAVUSBAB', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Irig pre-amp', 'CHAPREAMP', 'Videolager', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Cam slider', 'CHACAMS', 'Videolager', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Jib', 'CHAJIB', 'Videolager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mobil-tripod', 'CHAMTP', 'Videolager', 9)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Sevenoak skulder-rig', 'CHASSR', 'Videolager', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Lysstativ', 'CHALTP', 'Videolager', 11)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Ulanzi - lys og mic stativ', 'CHALMTPM', 'Videolager', 4)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Ulanzi mobil.stativ', 'CHAMTPU', 'Videolager', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Hodedelefoner mk', 'CHAMKHS', 'Videolager', 5)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mus mk', 'CHAMKMUS', 'Videolager', 26)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Canon objektiv tamron 90mm f2.8', 'CHACOBJ', 'Spesialager', 4)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Canon eos 60d', 'CHA60DEOS', 'Spesialager', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Easyrigg minimax', 'CHAERMM', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Bagger', 'CHASBAG', 'Spesialager', 9)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Osmo - gimble for mobil', 'CHAGBM', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Mx creative console', 'CHAMXCC', 'Spesialager', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Insta360 pro 2', 'CHA360P2', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('3dio fs xlr', 'CHALO3D', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Focusrite scarlett 4i4', 'CHALK4I4', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Focusrite 8i6', 'CHALK8I6', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Zoom live trak l-8', 'CHALKZOO', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Focusrite scarlett 18i8', 'CHALK18I8', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Aten hdmi splitter', 'CHAHDMIS', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Small rig mobil kit', 'CHAMKSR', 'Spesialager', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Transmount servo zoom/focus controller', 'CHACOBFC', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Weebill gimbal', 'CHAGBW', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Dji mini 5 pro', 'CHA5DJID', 'Spesialager', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Dji mini 4 pro', 'CHA4DJID', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Gopro 7 - kit', 'CHAGP7KIT', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Camalaps -timelaps', 'CHAGP7TLAP', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Gopro - vannstativ', 'CHAGP7VS', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Go pro - straps hode', 'CHAGP7STRHD', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Go pro - straps bryst', 'CHAGP7STRB', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Go pro - straps håndledd', 'CHAGP7STRHL', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Go pro - håndstativ', 'CHAGP7HS', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Go pro - håndstativ foam', 'CHAGP7HSFO', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Go pro - mini tripod', 'CHAGP7MINTRI', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Usb-c m til aux3.5mm f', 'CHAOGCA', 'Spesialager', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Lightning m til aux3.5mm f', 'CHAOGLA', 'Spesialager', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Ledgo aa batteri nf-np batteri', 'CHANFLG', 'Videolager', 6)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Zoom h4n recorder', 'CHALOH4', 'Videolager', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Zoom h1 recorder', 'CHALOH1', 'Videolager', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Tascam dr60d mkii opptaker', 'CHALO60D', 'Videolager', 4)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Vater', 'CHAVAT', 'Verksted', 2)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Voxicon dk-295b', 'CHATASTX', 'Verksted', 3)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Lenovi thinkvision e27q40', 'CHALENPS', 'Verksted', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Samsung u32r590cvr', 'CHASAM3PS', 'Verksted', 1)
+
+2026-05-20T11-45
+**********Error********** 
+UNIQUE constraint failed: categories.prefix 
+('Voxicon vxd g34uhdw', 'CHAVOXPS', 'Verksted', 1)
+
+2026-05-20T11-45 - No logs 
+2026-05-20T11-45
+**********Added********** 
+Added the following to the DB 
+[94, 1, 1, 'CHARØDMG']
+
+2026-05-20T11-45 - No logs 
+2026-05-20T11-45 - No logs 
