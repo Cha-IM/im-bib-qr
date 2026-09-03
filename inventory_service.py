@@ -99,19 +99,20 @@ def fetch_all_new()->list[list[str]]:
         a = ["ID", "CODE", "FG","BG"]
         return [a,*to_print]    
      
-def print_all_new():
+def print_all_new(forcedprint=False):
     """Generate pdf's for all items in the database yet to be printed.
     When QR_codes are printed it will update the items last printed values
     """
     with DB() as db:
         to_print = db.fetch_not_printed()
+        print(to_print)
     if not to_print:
         return False
     else:
-        print_items(to_print)
+        print_items(to_print,forcedprint)
    
 
-def print_items(to_print:list[str]):
+def print_items(to_print:list[str],forced_print=False):
     # Items need: 
     # ID
     # Prefix
@@ -124,8 +125,9 @@ def print_items(to_print:list[str]):
         items_list.append({"prefix":prefix, "fg":fg, "bg":bg})
         id_list.append(id)
 
-    # Fill-check
-    if (len(id_list) % MAX_PAGE_QR)/MAX_PAGE_QR < PAGE_PRINT_TRESHOLD: 
+    if forced_print:
+        pass
+    elif (len(id_list) % MAX_PAGE_QR)/MAX_PAGE_QR < PAGE_PRINT_TRESHOLD: 
         excess = len(id_list) % MAX_PAGE_QR
         id_list = id_list[:len(id_list)-excess] #Hopper over de n - første elementene.
         items_list = items_list[:len(id_list)-excess]
@@ -229,7 +231,10 @@ def demo():
 if __name__ == "__main__":
     # demo()
     # add_storages()
-    # remove_item_from_cat("CHAJIB",1)
+    
+    # remove_items_from_cat("CHAGOTLLA",[5,6,7,8])
+    # remove_items_from_cat("CHAGOTLSK",[5,6,7,8])
+    # remove_items_from_cat("CHAOCFC",[4,5,6])
     # add_to_category("CHAJIB",1)
 
     # create_new_categories_from_csv("input_9.csv")
@@ -237,5 +242,5 @@ if __name__ == "__main__":
     # create_new_category_with_items("KameraBatteri","BAT","Fotolager",44)
     # create_new_category_with_items("Objektiv","OBJ","Fotolager",57)
     # create_new_category_with_items("Kameralader","LAD","Fotolager",34)
-    # print_all_new()
+    print_all_new(forcedprint=True)
     pass
