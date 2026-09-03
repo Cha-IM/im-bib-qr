@@ -229,10 +229,10 @@ def demo():
 if __name__ == "__main__":
     # demo()
     # add_storages()
-    # remove_item_from_cat("CHARØDMG",1)
-    # add_to_category("CHARØDMG",1)
+    # remove_item_from_cat("CHAJIB",1)
+    # add_to_category("CHAJIB",1)
 
-    create_new_categories_from_csv("input_9.csv")
+    # create_new_categories_from_csv("input_9.csv")
     # create_new_category_with_items("Kamera","KA","Fotolager",40)
     # create_new_category_with_items("KameraBatteri","BAT","Fotolager",44)
     # create_new_category_with_items("Objektiv","OBJ","Fotolager",57)
